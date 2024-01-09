@@ -1,0 +1,126 @@
+/* === IMPORTANTE ===================================================
+   No modificar estos estilos, ya que son imprescindibles para
+   que la página se vea correctamente.
+   ================================================================== */
+
+/*-- Básico ----------------------------------------------------------*/
+ul, ul li { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, p, form { margin: 0; padding: 0; }
+.clear { clear: both; }
+img { border: none; }
+
+/*-- Layout ----------------------------------------------------------*/
+#contenedor {
+  width: 90%;
+  max-width: 900px;
+  width: expression(document.body.clientWidth > 901? "900px": "auto"); /* Es una expresión JavaScript que asigna un valor a un atributo CSS. */
+  margin: 0 auto;
+}
+
+#cabecera, #menu, #lateral, #contenido, #contenido #principal, #contenido #secundario, #pie {
+  border: 2px solid #777;
+}
+
+#cabecera { clear: both; }
+#menu { clear: both; }
+#lateral { float: left; width: 20%; }
+#contenido { float: right; width: 78%; }
+#contenido #principal { float: left; width: 78%; }
+#contenido #secundario { float: right; width: 20%; }
+#pie { clear: both; }
+
+/*-- Cabecera --------------------------------------------------------*/
+#cabecera #logo { float: left; }
+#cabecera #buscador { float: right; }
+
+/*-- Menu ------------------------------------------------------------*/
+#menu ul#menu_principal li { display: inline; float: left; }
+
+/*-- Sección Principal -----------------------------------------------*/
+#contenido #principal .articulo img { width: 100px; float: left; }
+
+/*-- Pie de página ---------------------------------------------------*/
+#pie .enlaces   { float: left; }
+#pie .copyright { float: right; }
+
+/* === IMPORTANTE ===================================================
+   A partir de aquí, se pueden añadir todos los estilos propios que 
+   sean necesarios.
+   ================================================================== */
+
+#cabecera,
+#menu,
+#lateral,
+#lateral #noticias,
+#lateral #publicidad,
+#contenido,
+#contenido #principal,
+#contenido #secundario,
+#pie {
+  padding: .5em;
+}
+ 
+#lateral {
+  padding: 0;
+}
+ 
+#cabecera {
+  padding: 1em;
+}
+ 
+#menu {
+  margin-bottom: .5em;
+}
+ 
+#contenido {
+  width: 77%;
+  padding: 0;
+}
+ 
+#contenido #principal {
+  width: 73%;
+}
+ 
+#pie {
+  padding: .5em 0;
+  margin-top: 1em;
+}
+ 
+#contenido #principal .articulo {
+  margin-bottom: 1em;
+}
+ 
+#contenido #principal .articulo img { 
+  margin: .5em;
+}
+ 
+#lateral #publicidad {
+  margin-top: 1em;
+}
+
+/*
+Observaciones:
+
+- Al añadir "padding", "margin" y demás, el layout se descuadra:
+Si se mira el layout que se ha hecho de la parte central de la página hay varios <div>:
+	#lateral 20% del ancho.
+	#contenido: 78% del ancho (a su vez dividido en #principal 78% y #secundario 20%).
+
+El 2% de "margen" que hay en cada caso obedece al tamaño reservado para "padding", "border" y "margin".
+
+En el "width" de cada elemento no está incluido ni "padding" ni "border".
+
+En Internet Explorer como siempre funcionaba diferente: http://stackoverflow.com/questions/4698054/css-does-the-width-include-the-padding
+
+Para que vuelva a caber todo, se tiene que modificar el "width" y reducirlo:
+	#contenido { width: 77%; padding: 0 }
+	#contenido #principal { width: 73% }
+
+- Ojo, se escribe "#contenido #principal" y no solo "#principal" como selector. Sí, el segundo caso es más cómodo.
+El tema es que como en la parte de arriba del CSS está puesto de una forma más detallada, si se pusiera abajo con
+el selector "@principal" sin más, no tendría preferencia por ser menos específica (aunque estuviera más abajo).
+Otra posibilidad sería cambiar el selector tanto arriba como abajo a "#principal". Entonces sí funcionaría.
+
+- La expresión "width: expression(document.body.clientWidth > 901? "900px": "auto");" es específica para Internet Explorer
+ya que la propiedad de CSS "max-width" no se soportaba en versiones inferiores a la 8: http://caniuse.com/#search=max-width
+*/

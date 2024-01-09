@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ejercicio 2.11.2</title>
+		<style>
+			p { /* Selector basado en etiqueta o tipo. */
+				margin: auto
+			}
+			.bola { /* Selector basado en clase genérica. */
+				border: 45px solid;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				font-size: xx-large;
+				text-align: center;
+			}
+			.bola:hover { /* Selector basado en clase genérica y pseudoclase. */
+				border-color: black
+			}
+			.bola:hover p::after { /* Combinación de selector basados en clases genéricas y pseudoelementos. */
+				content: ""
+			}
+			.bola:hover p::after { content: "8"	}
+			.contenedor {
+				padding: 10px;
+				width: max-content;
+				height: max-content;
+				border: 2px solid green;
+			}
+			.clearfix::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+			.fila {
+				width: 100%;
+				margin-bottom: -18px;
+			}
+			.uno {
+				border-color: orange;
+				margin: auto;
+			}
+			.uno p::after {	content: "1" }
+			.dos {
+				border-color: green;
+				clear: left;
+			}
+			.dos p::after {	content: "2" }
+			.tres {
+				border-color: blue;
+			}
+			.tres p::after { content: "3" }
+			.float {
+				display: block;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contenedor clearfix">
+			<div class="fila float">
+				<div class="bola uno">
+					<p></p>
+				</div>
+			</div>
+			<div class="bola dos float">
+				<p></p>
+			</div>
+			<div class="bola tres float">
+				<p></p>
+			</div>
+		</div>
+	</body>
+</html>
+
+<!--
+	Posicionamiento con etiquetas <div>.
+-->

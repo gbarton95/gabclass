@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ejercicio 2.11.1</title>
+		<style>
+			.bola { /* Selector basado en clase genérica. */
+				border: 45px solid;
+				border-radius: 50%;
+				width: 50px;
+				height: 50px;
+				font-size: xx-large;
+				text-align: center;
+			}
+			.contenedor {
+				padding: 10px;
+				width: max-content;
+				height: max-content;
+				border: 2px solid green;
+			}
+			.clearfix::after { /* Selector basado en clase genérica y pseudoelemento. */
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.fila {
+				width: 100%;
+				margin-bottom: -18px;
+			}
+			.uno {
+				border-color: orange;
+				margin: auto;
+			}
+			.dos {
+				border-color: green;
+				clear: left;
+			}
+			.tres {
+				border-color: blue;
+			}
+			.float {
+				display: block;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="contenedor clearfix">
+			<div class="fila float">
+				<div class="bola uno">
+					1
+				</div>
+			</div>
+			<div class="bola dos float">
+				2
+			</div>
+			<div class="bola tres float">
+				3
+			</div>
+		</div>
+	</body>
+</html>
+
+<!--
+	Posicionamiento con etiquetas <div>.
+	
+	Este ejercicio se puede solucionar de otras formas.
+	Por ejemplo con posicionamiento absoluto, relativo, etc.
+-->

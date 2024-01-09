@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3. Objeto.</title>
+  <script>
+
+    function pedirDatos(){
+      var nombre = prompt("Por favor, introduce tu nombre: ");
+      var apellido = prompt("Ahora tus apellidos: ");
+      //seguiré pidiendo el saldo mientras el dato que introduzca NO sea un número
+      do {
+        var saldo = prompt("Introduce tu saldo actual (sólo números): ");
+      }while(isNaN(saldo));
+
+      //Creamos la cuenta bancaria
+      var cuentanueva = new CuentaBancaria(nombre, apellido, saldo);
+
+      //Aquí retornamos los datos directamente del objeto:
+      return alert("Su cuenta ha sido creada con éxito. Se llama " + cuentanueva.nombre + " " + cuentanueva.apellidos + " y su saldo actual es de " +cuentanueva.saldo +"€.");
+
+    }
+
+    //Mi objeto cuenta bancaria
+    function CuentaBancaria (nombre, apellidos, saldo) {
+      this.nombre = nombre;
+      this.apellidos = apellidos;
+      this.saldo = saldo;
+    }
+
+  </script>
+</head>
+
+<body>
+  <!--Botón que llama a la función de mi script-->
+  <input type="button" value="Crear cuenta bancaria" onclick="pedirDatos()">
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3.2.2 segunda version</title>
+  <script>
+
+    //creo el vector:
+    var cadena = [35, -4, 33.5, 1, -12];
+
+    //muestro el vector por pantalla:
+    document.write("Los elementos del vector son: " + cadena.join(", ") + "<br><br>");
+
+    //Muestro únicamente los valores negativos...
+
+    //...pidiendo que imprima sólo si es negativo:
+
+    document.write("a) Los números negativos del vector son: ");
+    for (let i = 0; i <= cadena.length - 1; i++) {
+      if (cadena[i] < 0) {
+        document.write(cadena[i] + " ");
+      }
+    }
+
+    //...creando un nuevo array de negativos a partir del original:
+
+    var numerosNegativos = new Array();
+
+    for (let i = 0; i <= cadena.length - 1; i++) {
+      if (cadena[i] < 0) {
+        numerosNegativos.push(cadena[i]);
+      }
+    }
+    document.write("<br>b) Los números negativos del vector son: " + numerosNegativos)
+
+    //Devuelvo en un nuevo array el triple de sus valores:
+
+    var arrayTriple = new Array();
+
+    for (let i = 0; i <= cadena.length - 1; i++) {
+      var valornuevo = cadena[i] * 3.;
+      arrayTriple.push(valornuevo);
+    }
+    document.write("<br><br>El array triplicado sería: " + arrayTriple.join(", ")+"<br><br>");
+
+    //Calculo el resultado de multiplicar todos los valores del nuevo array:
+
+    var resultado = 1;
+    for (let i = 0; i <= arrayTriple.length - 1; i++) {
+      resultado *= arrayTriple[i];
+    }
+    document.write("El resultado de multiplicar todos los valores del nuevo array sería de: "+resultado);
+  </script>
+</head>
+
+<body>
+
+</body>
+</html>

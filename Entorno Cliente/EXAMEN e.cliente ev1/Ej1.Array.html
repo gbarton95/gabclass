@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1. Array.</title>
+</head>
+
+<body>
+  <script>
+    ///////////////////////////////PARTE 1//////////////////////////////
+
+    var numericos = new Array();
+    for (let i = 0; i < 100; i++) {
+      //para crear un número aleatorio entre 20 y 99, utilizo Math.random que me da un valor entre 0 y 1,
+      //después lo multiplico por 79 y después le sumo 20. De esta forma, el número más pequeño me dará 20
+      //y el más grande no llegará a 100.
+      var random = parseInt((Math.random() * 79).toFixed(0)) + 20;
+
+      //ahora lo meto en mi array numericos:
+      numericos.push(random);
+    }
+
+    //Creamos nuevo array y un contador a 0
+    var contador = 0;
+    var primeros15 = new Array();
+
+      //Meteremos los 15 primeros valores del array numericos...
+      for (let i = 0; contador < 15; i++) {
+        //...sólo si cumplen ser múltiplos de 2 o 3
+        if (numericos[i] % 2 == 0 || numericos[i] % 3 == 0) {
+          primeros15.push(numericos[i]);
+          contador++;
+        }
+      }
+
+      //Ahora imprimimos nuestro nuevo array con el método join:
+      document.write("a) "+primeros15.join("~")+"<br><br>")
+
+
+      ///////////////////////////////PARTE 2//////////////////////////////
+
+      //tomamos nuestro array primeros15 para recorrer sus valores...
+      for (let i = 0; i < primeros15.length; i++) {
+        //...y sustituirlos si son impares por el string "impar"
+        if (primeros15[i]%2 != 0)
+          primeros15[i] = "impar";
+      }
+      //Volvemos a imprimir:
+      document.write("b) "+primeros15.join("~")+"<br><br>")
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1. Diccionario</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*Mi contenedor general estará centrado en la página*/
+    .contenedor {
+      width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /*El primer párrafo está en negrita*/
+    p:first-child {
+      font-weight: bold;
+    }
+
+    /*Defino un div "cuadro" para contener las listas, una al lado de la otra*/
+    #cuadro {
+      display: flex;
+      border: 2px solid;
+      border-radius: 5px;
+    }
+
+    #cuadro ul {
+      float: left;
+    }
+
+    /*Modifico las listas para que una tenga cuadrados y otra nada. Además, ul.esp está invisible*/
+    ul.ing li {
+      list-style-type: square;
+    }
+
+    ul.esp li {
+      list-style-type: none;
+      display: none;
+    }
+
+    /*Cuando haga hover sobre el elemento de una clase se harán visibles los demás de esa clase*/
+    /* li.op1:hover {
+      display: block;
+    }
+    */
+
+
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <p>Vocabulario: Inglés - Español</p>
+    <div id="cuadro">
+      <ul class="ing">
+        <li class="op1">Car</li>
+        <li class="op2">Window</li>
+        <li class="op3">Door</li>
+      </ul>
+      <ul class="esp">
+        <li class="op1">Coche</li>
+        <li class="op2">Ventana</li>
+        <li class="op3">Puerta</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

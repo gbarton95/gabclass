@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2. Diana</title>
+  <style>
+    body {
+      margin: 20px;
+      padding: 0;
+    }
+
+    /*Mi contenedor general estará centrado en la página*/
+    .contenedor {
+      width: 250px;
+      height: 250px;
+      margin: auto;
+      border: 1px solid black;
+      border-radius: 15px;
+      background-color: rgb(8, 71, 207);
+    }
+
+    .radio { /* Selector basado en clase genérica. */
+        border: 1px solid black;
+				border-radius: 50%;
+				font-size: large;
+        font-weight: bolder;
+        color: white;
+				text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+			}
+
+      .verde {
+        background-color: green;
+        height: 150px;
+        width: 150px;
+        margin-top: 50px;
+      }
+
+      .naranja {
+        background-color: orange;
+        height: 100px;
+        width: 100px;
+      }
+
+      .rojo {
+        background-color: red;
+        height: 50px;
+        width: 50px;
+      }
+
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <div id="cuadro">
+      <div class="radio verde">
+        30
+        <div class="radio naranja">
+          40
+          <div class="radio rojo">
+            50
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

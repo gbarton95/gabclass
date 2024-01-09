@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones, Arrays y Objetos JS</title>
+
+  <script>
+    function ProductosAlimenticios(codigo, nombre, precio) {
+      this.codigo = codigo;
+      this.nombre = nombre;
+      this.precio = precio;
+
+      this.imprimeDatos = imprimeDatos;
+
+      function imprimeDatos() {
+        return "<b>Código:</b> " + this.codigo + "<br><b>Nombre del producto:</b> " + this.nombre + "<br><b>Precio:</b> " + this.precio + "€.<br><br>";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    var leche = new ProductosAlimenticios(1, "leche", 2.5);
+    var carne = new ProductosAlimenticios(6, "carne", 7.63);
+    var aceite = new ProductosAlimenticios(13, "aceite", 100000);
+
+    var productos = new Array(leche, carne, aceite);
+
+    //Imprimo valores con bucle for
+    for (let i = 0; i < productos.length; i++) {
+      document.write(productos[i].imprimeDatos());
+    }
+  </script>
+</body>
+</html>

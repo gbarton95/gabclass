@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3.2.2 primera version</title>
+  <script>
+    var cadena = [true, 5, false, "hola", "adios", 2];
+
+    // Comprobar si el quinto componente es mayor que el cuarto:
+    if(cadena[4]>cadena[3]){
+      document.write("El quinto componente es mayor que el cuarto.<br>")
+    }else{
+      document.write("El quinto componente es menor que el cuarto.<br>")
+    }
+
+    //Realizar un OR entre el primer y el tercer componente:
+    var OR = cadena[0] || cadena[2];
+    if(OR==true){
+      document.write("Operador OR entre el primer y tercer componente da: TRUE<br>");
+    }else if(OR==false){
+      document.write("Operador OR entre el primer y tercer componente da: FALSE<br>");
+    }else{
+      document.write("Algo ha salido mal<br>");
+    }
+
+    //Realizar un AND entre el primer y el tercer componente:
+    var AND = cadena[0] && cadena[2];
+    if(AND==true){
+      document.write("Operador AND entre el primer y tercer componente da: TRUE<br>");
+    }else if(AND==false){
+      document.write("Operador AND entre el primer y tercer componente da: FALSE<br>");
+    }else{
+      document.write("Algo ha salido mal<br>");
+    }
+
+    //Sumar, restar, multiplicar, dividir y calcular el módulo entre el segundo y el sexto componente.
+    var segundo = parseInt(cadena[1]);
+    var sexto = parseInt(cadena[5]);
+
+    document.write("<p>SUMA de " + segundo + "+" + sexto + " = " + (segundo+sexto) + "<br>" +
+    "RESTA de " + segundo + "-" + sexto + " = " + (segundo-sexto) + "<br>" +
+    "DIVISIÓN de " + segundo + "/" + sexto + " = " + (segundo/sexto) + "<br>" +
+    "MÓDULO de " + segundo + "%" + sexto + " = " + (segundo%sexto) + "</p>");
+
+  </script>
+</head>
+<body>
+
+</body>
+</html>

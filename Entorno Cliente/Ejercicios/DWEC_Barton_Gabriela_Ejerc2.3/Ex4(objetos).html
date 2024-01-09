@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta name="author" content="Gabriela Barton">
+  <title>Varios objetos predefinidos de JS</title>
+</head>
+
+<body>
+  <h1>Varios objetos predefinidos de JS</h1>
+
+  <script>
+    document.bgColor = 'gray';
+    document.fgColor = 'white';
+
+    var ancho = window.screen.availWidth;
+    var alto = window.screen.availHeight;
+
+    // Calcular la diagonal
+    var diagonal = Math.sqrt(Math.pow(ancho, 2) + Math.pow(alto, 2));
+
+    // Mostrar la diagonal en el documento con 1 decimal
+    diagonalformato = diagonal.toFixed(1);
+
+   document.write("El número de píxeles en la diagonal de tu pantalla es de: "+diagonalformato+" píxeles.");
+
+  </script>
+</body>
+</html>

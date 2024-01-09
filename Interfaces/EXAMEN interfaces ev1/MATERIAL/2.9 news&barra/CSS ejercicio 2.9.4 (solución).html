@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ejercicio 2.9.4</title>
+		<style>
+			div#paginacion {
+				border: 1px solid #CCC;
+				background-color: #E0E0E0;
+				padding: .5em;
+				/*overflow: auto;*/
+			}
+			.derecha { float: right	}
+			.izquierda { float: left }
+			div.clear {	clear: both }
+		</style>
+	</head>
+	<body>
+		<div id="paginacion">
+			<span class="izquierda">&laquo; Anterior</span>
+			<span class="derecha">Siguiente &raquo;</span>
+			<div class="clear"></div>
+		</div>
+	</body>
+
+</html>
+
+<!-- 
+	El <div> "paginacion" como elemento contenedor tiene que tener algún elemento que no sea "float",
+	ya que si no, se salen del flujo y el contenedor no los contendría. 
+	Por eso es práctica habitual añadir un <div> justo antes del final del <div> contenedor cuya clase haga un "clear:both".
+	
+	Otra opción habría sido que algún elemento dentro del <div> no fuera "float", pero se suele
+	trabajar con todos los <div> actuando de forma flotante.
+	
+	También poniendo el "overflow:auto" en el <div> principal se podría prescindir del "div.clear":
+	http://www.sitepoint.com/simple-clearing-of-floats/
+	
+	Es importante que quede claro este concepto.
+-->

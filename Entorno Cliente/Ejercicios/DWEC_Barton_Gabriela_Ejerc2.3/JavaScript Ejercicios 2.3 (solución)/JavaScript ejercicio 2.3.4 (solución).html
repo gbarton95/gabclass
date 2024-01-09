@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejercicio 2.3.4</title>		
+	</head>
+	<body>
+		<script>
+			var anchura = screen.availWidth; // Anchura disponible.
+			var altura = screen.availHeight; // Altura disponible.
+			
+			var diagonal = Math.sqrt(Math.pow(anchura,2) + Math.pow(altura,2)); // Cálculo diagonal.
+			
+			diagonal = diagonal.toFixed(1); // 1 cifra decimal.
+			//diagonal = diagonal.toPrecision(5); // 4 cifras del entero + 1 cifra decimal.
+			
+			document.write("La diagonal de tu pantalla es de: " + diagonal + " píxeles");
+			document.fgColor = "white";
+			document.bgColor = "grey";
+			document.title = "Varios objetos predefinidos de JS";
+		</script>
+	</body>
+</html>

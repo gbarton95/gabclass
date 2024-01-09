@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones, Arrays y Objetos JS</title>
+
+  <script>
+    //Primero mayor que segundo
+    function comprobarMayor(num1, num2) {
+      if (num1 > num2) {
+        return "<b>1-</b> El primer número es mayor que el segundo.<br>";
+      } else {
+        return "<b>1-</b> El primer número NO es mayor que el segundo.<br>";
+      }
+    }
+
+    //Segundo positivo
+    function comprobarPositivo(num) {
+      if (num > 0) {
+        return "<b>2-</b> El segundo número es positivo.<br>";
+      } else if (num === 0) {
+        return "<b>2-</b> El segundo número es 0.<br>";
+      } else {
+        return "<b>2-</b> El segundo número NO es positivo.<br>";
+      }
+    }
+
+    //Primero negativo o distinto de 0
+    function negativoCero(num) {
+      if (num < 0 || num !== 0) {
+        return "<b>3-</b> El primer número es negativo o distinto de 0.<br>";
+      } else {
+        return "<b>3-</b> El primer número NO es negativo y es distinto de 0.<br>";
+      }
+    }
+
+    //Sumar 1 al primero lo convierte en >= que segundo
+    function sumar1Comparar(num1, num2) {
+      num1 += 1;
+      if (num1 >= num2) {
+        return "<b>4-</b> Al sumar 1, el primer número es mayor o igual que el segundo.<br>";
+      } else {
+        return "<b>4-</b> Al sumar 1, el primer número NO es mayor o igual que el segundo.<br>";
+      }
+    }
+
+
+    //función extra para validar los números antes de pasarlos por el resto de las funciones
+    function validoNumeros() {
+      var num1 = parseFloat(prompt("Introduce el primer número:"));
+      var num2 = parseFloat(prompt("Introduce el segundo número:"));
+
+      while (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, introduce números válidos.");
+        num1 = parseFloat(prompt("Introduce el primer número:"));
+        num2 = parseFloat(prompt("Introduce el segundo número:"));
+      }
+
+      document.write("Los números que has introducido son <b>" + num1 + "</b> y <b>" + num2 + "</b>. Por tanto:<br>")
+      document.write(comprobarMayor(num1, num2));
+      document.write(comprobarPositivo(num2));
+      document.write(negativoCero(num1));
+      document.write(sumar1Comparar(num1, num2));
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    validoNumeros();
+  </script>
+</body>
+</html>

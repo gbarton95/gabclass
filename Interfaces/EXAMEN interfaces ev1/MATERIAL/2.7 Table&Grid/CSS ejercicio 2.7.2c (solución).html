@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Ejercicio 2.7.2c</title>
+		<style>
+			* { /* Selector universal. */
+				vertical-align: middle;
+			}
+			.grid { /* Selector basado en clase genérica. */
+				display: grid;
+				width: max-content;
+				grid-template-columns: max-content max-content max-content max-content max-content max-content;
+				border: 1px solid;
+			}
+			.grid div {
+				display: flex;
+				padding: 5px;
+				border: 1px solid;
+				align-items: center;
+			}
+			.item1 {
+				grid-column: 2 / 3;
+				grid-row: 2 / 5;
+			}
+			.item2 {
+				grid-column: 3 / 4;
+				grid-row: 2 / 5;
+			}
+			.item3 {
+				grid-column: 4 / 5;
+				grid-row: 2 / 5;
+			}
+			.item4 {
+				grid-column: 5 / 6;
+				grid-row: 2 / 4;
+			}
+			.item5 {
+				grid-column: 6 / 7;
+				grid-row: 2 / 4;
+			}
+			.center {
+				grid-column: 2 / 7;
+				justify-content: center;
+			}
+			.item6 {
+				grid-column: 3 / 4;
+				grid-row: 6 / 10;
+			}
+			.item7 {
+				grid-column: 2 / 3;
+				grid-row: 7 / 10;
+			}
+			.item8 {
+				grid-column: 4 / 5;
+				grid-row: 7 / 10;
+			}
+			.item9 {
+				grid-column: 5 / 6;
+				grid-row: 7 / 10;
+			}
+			.item10 {
+				grid-column: 6 / 7;
+				grid-row: 7 / 10;
+			}
+			.blue {
+				background-color: deepskyblue;
+			}
+			.green {
+				background-color: springgreen;
+			}
+			.orange {
+				background-color: orange;
+			}
+			.yellow {
+				background-color: yellow;
+			}
+			.purple {
+				background-color: darkorchid;
+			}
+			.red {
+				background-color: indianred;
+			}
+			.center {
+				text-align: center;
+			}
+			.header {
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<div class="header">Horas</div>
+			<div class="header">Lunes</div>
+			<div class="header">Martes</div>
+			<div class="header">Miércoles</div>
+			<div class="header">Jueves</div>
+			<div class="header">Viernes</div>
+			<div>1</div>
+			<div class="item1 purple">DWES</div>
+			<div class="item2 purple">DWES</div>
+			<div class="item3 purple">DWES</div>
+			<div class="item4 green">DWEC</div>
+			<div class="item5 red">EIE</div>
+			<div>2</div>
+			<div>3</div>
+			<div class="blue">DAW</div>
+			<div class="orange">ING</div>
+			<div>-</div>
+			<div class="center" colspan="5">RECREO</div>
+			<div>4</div>
+			<div class="red" >EIE</div>
+			<div class="item6 yellow">DIW</div>
+			<div class="yellow">DIW</div>
+			<div class="blue">DAW</div>
+			<div class="orange">ING</div>
+			<div>5</div>
+			<div class="item7 blue">DAW</div>
+			<div class="item8 green">DWEC</div>
+			<div class="item9 yellow">DIW</div>
+			<div class="item10 green">DWEC</div>
+			<div>6</div>
+		</div>
+	</body>
+</html>

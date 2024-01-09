@@ -1,0 +1,49 @@
+
+p .resaltar {
+	background-color: yellow;
+	font-size: 110%
+}
+
+p + p { font-weight: bold }
+
+ul { list-style: none }
+
+li { margin: 10px }
+
+/*El símbolo ^ significa 'comienza con', así que href^=# significa que selecciona
+los href que comiencen con lo que se ponga luego*/
+
+a[href^="#"] {
+	background: url(./internal-link.png) no-repeat 100% 0;
+	background-position: 0, 0;
+	background-size: 16px 16px;
+	padding-left: 19px
+
+}
+
+a[href^="http"] {
+	background: url(./external-link.png) no-repeat 100% 0;
+	background-position: 0, 0;
+	background-size: 16px 16px;
+	padding-left: 19px
+
+}
+
+/*El símbolo $ significa 'termina con', así que href$=... significa que selecciona
+los href que terminen con lo que se ponga luego*/
+a[href$=".pdf"] {
+	background: url(./pdf-link.png) no-repeat 100% 0;
+	background-position: 0, 0;
+	background-size: 16px 16px;
+	padding-left: 19px
+}
+
+a[href$=".zip"] {
+	background: url(./zip-link.png) no-repeat 100% 0;
+	background-position: 0, 0;
+	background-size: 16px 16px;
+	padding-left: 19px
+}
+
+/*El símbolo * significa 'que contenga', así que href*=... significa que selecciona
+los href que contengan lo que se ponga luego*/

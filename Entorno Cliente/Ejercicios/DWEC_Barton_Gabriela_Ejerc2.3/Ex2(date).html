@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta name="author" content="Gabriela Barton">
+  <title>Fecha y Hora</title>
+</head>
+
+<body>
+  <script>
+    //Declaro la fecha actual:
+    var fecha = new Date();
+
+    //Inicializo las variables que me interesan:
+    var nombreDiaSemana, nombreMes, diaMes = fecha.getDate(), horas=fecha.getHours(), minutos=fecha.getMinutes(), anyo=fecha.getFullYear();
+
+    //Para asignar el día de la semana sin utilizar arrays:
+    switch (fecha.getDay()) {
+      case 0:
+        nombreDiaSemana = "domingo";
+        break;
+      case 1:
+        nombreDiaSemana = "lunes";
+        break;
+      case 2:
+        nombreDiaSemana = "martes";
+        break;
+      case 3:
+        nombreDiaSemana = "miércoles";
+        break;
+      case 4:
+        nombreDiaSemana = "jueves";
+        break;
+      case 5:
+        nombreDiaSemana = "viernes";
+        break;
+      case 6:
+        nombreDiaSemana = "sábado";
+        break;
+      default:
+        nombreDiaSemana = "no válido";
+    }
+
+    //Para asignar el nombre del mes sin utilizar arrays:
+    switch (fecha.getMonth()) {
+      case 0:
+        nombreMes = "Enero";
+        break;
+      case 1:
+        nombreMes = "Febrero";
+        break;
+      case 2:
+        nombreMes = "Marzo";
+        break;
+      case 3:
+        nombreMes = "Abril";
+        break;
+      case 4:
+        nombreMes = "Mayo";
+        break;
+      case 5:
+        nombreMes = "Junio";
+        break;
+      case 6:
+        nombreMes = "Julio";
+        break;
+      case 7:
+        nombreMes = "Agosto";
+        break;
+      case 8:
+        nombreMes = "Septiembre";
+        break;
+      case 9:
+        nombreMes = "Octubre";
+        break;
+      case 10:
+        nombreMes = "Noviembre";
+        break;
+      case 11:
+        nombreMes = "Diciembre";
+        break;
+      default:
+        nombreMes = "no válido";
+    }
+
+    // Formateo horas y minutos usando padStart para agregar ceros a la izquierda
+    var horasFormateadas = horas.toString().padStart(2, '0');
+    var minutosFormateados = minutos.toString().padStart(2, '0');
+
+    //Imprimo en formato: "Hoy es lunes, 28 de Noviembre de 2022 y son las 14:32 horas"
+    document.write("Hoy es " + nombreDiaSemana + ", " + diaMes + " de "+nombreMes+" de "+anyo+", y son las "+horasFormateadas+':'+minutosFormateados+" horas.");
+
+  </script>
+</body>
+</html>

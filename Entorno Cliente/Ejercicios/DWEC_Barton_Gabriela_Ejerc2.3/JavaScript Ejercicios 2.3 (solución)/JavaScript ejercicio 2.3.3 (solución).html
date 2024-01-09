@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejercicio 2.3.3</title>
+		<script>
+			dni = prompt("Introduce tu DNI:");
+				
+			numerodni = dni.substr(0, dni.length-1); // "substr()" devuelve una subcadena en base a un índice y longitud pasados como parámetros.
+			letradni = dni.substr(dni.length-1, 1);
+			numero = numerodni % 23; // Resto de la división.
+			letra = 'TRWAGMYFPDXBNJZSQVHLCKET';
+			letra = letra.substring(numero, numero + 1);
+				
+			if (letra != letradni.toUpperCase()) { // "toUpperCase()" convierte una cadena en mayúsculas.
+				// DNI incorrecto.
+				alert ("DNI introducido incorrectamente.");
+			} else {
+				// DNI correcto.
+				alert ("DNI introducido correctamente.");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

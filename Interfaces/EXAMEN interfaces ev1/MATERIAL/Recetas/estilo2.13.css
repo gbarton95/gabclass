@@ -1,0 +1,196 @@
+body {
+  margin: 10px 20px 10px 20px;
+  /* Margen superior, derecho, inferior e izquierdo*/
+}
+
+header {
+  margin-bottom: 0px;
+  padding-bottom: 0;
+}
+
+/*El ancho de la imagen de la cabecera define el ancho de la página.
+Está centrada porque no tiene alternativa.*/
+header #cabecera img {
+  width: 100%;
+}
+
+/*Para centrar el texto y que la imagen logotipo estuviera a la izquierda
+he decidido crear un tercer elemento vacío y utilizar un 'space between'.
+También podría haberlo hecho con posiciones relativas y absolutas. */
+
+header #logotipo {
+  display: flex;
+  width: 100%;
+  background-color: #3F2701;
+  color: white;
+  font-size: 30px;
+  justify-content: space-between;
+}
+
+header #logotipo img {
+  margin-left: 1em;
+}
+
+header #logotipo p {
+  margin-right: 1em;
+}
+
+/*Movimiento de scroll 'suave' o smooth*/
+html {
+  scroll-behavior: smooth;
+}
+
+/************************************Comienzo a diseñar menú desplegable********************************/
+
+/*Es sticky con el límite en el top*/
+nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+  height: 51px;
+  margin: 0;
+  padding: 0;
+
+}
+
+/*Decido identificar la lista desordenada de items primarios (o prim) como #menu,
+pero realmente ocupa a niveles efectivos el mismo espacio que el div nav*/
+nav #menu {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: black;
+  font: 16px Verdana;
+
+}
+
+/*Quito el estilo de la lista desordenada, así como márgenes*/
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*Añado estilo básico a los hijos más anidados*/
+nav #menu li a {
+  display: block;
+  background-color: #f1f1f0;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+
+nav #menu li a:hover {
+  background-color: #dddddd;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+}
+
+/*El estilo de los enlaces del menú con clase prim*/
+nav #menu li.prim>a {
+  display: flex;
+  background-color: #3B8E44;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}
+
+/*Aparece la sublista cuando hago hover sobre el padre directo*/
+nav #menu li:hover>ul {
+  display: block;
+}
+
+/*Borde exterior naranja cuando se selecciona el artículo*/
+
+article:target {
+  outline: 3px solid #da5e33;
+}
+
+
+/************************************Termino de diseñar menú desplegable********************************/
+
+
+/*Los estilos básicos del main y artículos que lo componen*/
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #CEC5C6;
+  align-items: center;
+  border: none;
+
+}
+
+article {
+  max-width: 600px;
+  width: 70%;
+  padding: 10px;
+  padding-bottom: 0px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 40px;
+  border-radius: 3px;
+}
+
+article p {
+  margin-bottom: 10px;
+}
+
+/*La imagen en su sitio y con su borde*/
+article img {
+  float: right;
+  height: 80px;
+  border: 2px solid black;
+}
+
+/************************************Checkboxes de inglés y columnas********************************/
+
+/*Por defecto, NO aparece el texto en inglés*/
+article p.ing {
+  display: none;
+}
+
+/*Al chequear el box .eng, desaparece el p español y aparece el p inglés.
+Aplico la norma únicamente a los elementos que son hermanos porque, si no,
+al clicar sobre un solo checkbox se traducirían todos los artículos*/
+.eng:checked~.esp {
+  display: none;
+}
+
+.eng:checked~.ing {
+  display: block;
+}
+
+/*Por último, aplico el column-count para dividir en 2 columnas al marcar
+el checkbox .col*/
+article .col:checked~p {
+  column-count: 2;
+}
+
+
+/*********************************Termino checkboxes de inglés y columnas*****************************/
+
+
+footer {
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: black;
+  align-items: center;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+  height: 20px;
+  color: white;
+  font-size: large;
+  padding: 0;
+}

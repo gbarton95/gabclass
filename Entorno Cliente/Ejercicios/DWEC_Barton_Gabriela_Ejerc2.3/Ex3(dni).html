@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta name="author" content="Gabriela Barton">
+  <title>Validar DNI</title>
+</head>
+
+<body>
+  <script>
+
+    //constante que nos dan: el string de letras
+    const letras = 'TRWAGMYFPDXBNJZSQVHLCKET';
+
+    //inicializo variable
+    var datosDNI;
+
+
+    //si el usuario no mete 9 dígitos volveré a pedirle el DNI
+    do {
+      datosDNI = prompt("Introduce tu DNI:");
+    } while (datosDNI.length != 9);
+
+    //mis variables: los datos divididos en los primeros 8 dígitos y el último (que debería ser la letra)
+    var numeros = datosDNI.substring(0, 8);
+    var letra = datosDNI.charAt(8).toUpperCase();
+
+    //obtengo el resto del número obtenido por el usuario entre 23
+    var resto = parseInt(numeros) % 23;
+
+    //obtengo la letra correspondiente según su posición en el string
+    var letraDNI = letras.charAt(resto);
+
+    //Ahora sólo queda validar y mostrar el mensaje en ventana emergente:
+    if (letraDNI == letra)
+      window.alert("El DNI es correcto");
+    else
+      window.alert("El DNI no es correcto");
+
+  </script>
+</body>
+</html>

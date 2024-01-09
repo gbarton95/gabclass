@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventana Móvil</title>
+  <script>
+    // Función que realiza el movimiento y cierra la ventana después de 19 iteraciones
+    function moverVentana() {
+      // Verificar si ya se realizaron las 19 iteraciones
+      if (contadorIteraciones >= 19) {
+        clearInterval(intervalID); // Detener el intervalo
+        ventanaMovil.close(); // Cerrar la ventana
+      } else {
+        // Mover la ventana 5 píxeles a la derecha y 5 abajo respecto a la posición actual
+        ventanaMovil.moveBy(5, 5);
+        contadorIteraciones++;
+      }
+    }
+
+    // Abrir la ventana con las dimensiones especificadas
+    var ventanaMovil = window.open('', '', 'width=250,height=150');
+
+    // Mover la ventana a la posición inicial
+    ventanaMovil.moveTo(100, 100);
+
+    // Mover la ventana a la segunda posición después de un tiempo
+    setTimeout(function() {
+      ventanaMovil.moveTo(400, 100);
+    }, 2000); // Esperar 2000 milisegundos (2 segundos)
+
+    // Contador para llevar el control de las iteraciones
+    var contadorIteraciones = 0;
+
+    // Configurar el intervalo para el movimiento repetitivo cada 100 milisegundos
+    var intervalID = setInterval(moverVentana, 100);
+  </script>
+</head>
+<body>
+  <!-- Contenido de la página -->
+</body>
+</html>

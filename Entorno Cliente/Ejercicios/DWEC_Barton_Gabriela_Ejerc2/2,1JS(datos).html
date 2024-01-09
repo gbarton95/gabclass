@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta name="author" content="Gabriela Barton">
+  <title>Ejercicios de clase 26/09/2023</title>
+</head>
+
+<body>
+  <script>
+    //1.	Guarda tus datos nombre, edad, altura y casado (true o false) en variables. Muéstralas en la página Web con saltos de línea.
+
+  var nombre = prompt("¿Cómo te llamas?", "");
+  var edad = prompt("¿Cuántos años tienes?", "");
+  var altura = prompt("¿Cuánto mides?", "");;
+  var casado = confirm("¿Estás casado?");
+
+  document.write("Tu nombre es " + nombre);
+  document.write("<br>");
+  document.write("Tienes " +edad+ " años.");
+  document.write("<br>");
+  document.write("Mides " +altura+ " m.");
+  document.write("<br>");
+  if(casado==true)
+    document.write("Estás casado.");
+  else
+    document.write("No estás casado.");
+  </script>
+</body>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta name="author" content="Gabriela Barton">
+  <title>Par o Impar</title>
+  <script type="text/javascript">
+    function ParImpar(numero) {
+      if (isNaN(numero)) {
+        alert("Por favor introduzca un número válido.");
+      } else if (numero % 2 == 0) {
+        alert("El número es par.");
+      } else {
+        alert("El número es impar.");
+      }
+    }
+</script>
+</head>
+
+<body>
+  <script>
+    var numero = prompt("Introduzca un número distinto a 0: ");
+    ParImpar(numero);
+  </script>
+</body>

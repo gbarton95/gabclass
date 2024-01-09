@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones, Arrays y Objetos JS</title>
+
+  <script>
+    function validaDNI(userdata) {
+      // Array de letras del DNI
+      const letras = new Array('T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T');
+      DNIvalido = false;
+
+      while (!DNIvalido) {
+      // Convierto el userdata en un array, y después separo los elementos
+      var datosDNI = userdata.split('');
+
+      // Divido en dos variables los primeros 8 dígitos y el último (que debería ser la letra)
+      var numericos = datosDNI.slice(0, 8);
+      var letrica = datosDNI.slice(-1);
+
+      // Obtengo el resto del número obtenido por el usuario entre 23
+      // En el peor de los casos, si el número no es correcto, el resultado tampoco será correcto
+      // y volverá a iniciarse el bucle, así que no es necesaria la validación
+      var resto = parseInt(numericos.join('')) % 23;
+
+      //Si el resto es un número, compararemos con la letra que corresponde y devolveremos el resultado
+        if (!isNaN(resto)) {
+          if (letrica[0] == letras[resto]) {
+            //Mientras no llegue a ser un DNI válido, permaneceremos en el bucle while
+            DNIvalido = true;
+            //aquí estaría el retorno de valor
+            return alert("El DNI es correcto.");
+          } else {
+            userdata = prompt("El DNI no es correcto. Asegúrate de no poner espacios y utilizar una letra mayúscula.")
+          }
+        } else {
+          userdata = prompt("No has introducido un formato válido. Asegúrate de no poner espacios y utilizar una letra mayúscula.")
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    validaDNI(prompt("Introduzca un DNI: "));
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manipular Array</title>
+  <script>
+
+    function agregarPalabras() {
+      var palabras = new Array();
+      var ventana;
+
+      palabras = miformulario.introusuario.value.split(" ");
+
+      ventana = window.open("", "", "width=400,height=300");
+
+      ventana.document.write("<title>Manipular Arrays</title>");
+      ventana.document.write("<br><b>Primera palabra: </b> " + palabras[0]);
+      ventana.document.write("<br><b>Última palabra: </b> " + palabras[palabras.length-1]);
+      ventana.document.write("<br><b>Número de palabras: </b> " + palabras.length);
+      ventana.document.write("<br><b>Ordenadas alfabéticamente: </b> " + palabras.sort().join(" - "));
+    }
+  </script>
+</head>
+
+<body>
+  <form name="miformulario">
+    <h1>Manipular Array</h1>
+    <br>
+    <h4>Introduce algunas palabras:</h4>
+    <textarea id="introusuario" rows="4" cols="40"></textarea>
+    <br>
+    <button onclick="agregarPalabras()">Aceptar</button>
+  </form>
+</body>
+</html>

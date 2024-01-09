@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3.2.3</title>
+  <script>
+    //creo la función factorializar
+    function factorializar(numero) {
+      //filtro si el número no es válido
+      if (numero == null || isNaN(numero)) {
+        alert("No has introducido un número válido.")
+      } else {
+        //la lógica matemática para obtener el factorial
+        var factorial = 1;
+        for (var i = 1; i <= numero; i++) {
+          factorial *= i;;
+        }
+        //resultado del factorial impreso
+        alert("El factorial del número que has introducido (" + numero + ") es: " + factorial);
+      }
+    }
+
+    //Pido al usuario mediante prompt que me dé el número y aplico la función
+    var num = prompt("Introduce un número: ");
+    factorializar(num);
+
+  </script>
+</head>
+
+<body>
+  <!--Esto había puesto antes de darme cuenta de que pedía entrada por prompt
+  <form name="miformulario">
+    <label for="num">Introduce un número: </label>
+    <input type="number" id="num">
+    <button onclick="factorializar()">Calcular factorial</button>
+  </form>
+  -->
+</body>
+</html>

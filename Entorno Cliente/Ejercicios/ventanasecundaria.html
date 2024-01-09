@@ -1,0 +1,15 @@
+<html><head></head><body>
+  <h1> Ejemplo de apariencia de una ventana </h1><br>
+  <input type="Button" value="Abre una Ventana" onclick="
+  myWindow=window.open('', 'Nueva Ventana', 'width=300,height=200');
+  myWindow.document.write('<html>');
+  myWindow.document.write('<head>');
+  myWindow.document.write('<title>Ventana Test</title>');
+  myWindow.document.write('</head>');
+  myWindow.document.write('<body>');
+  myWindow.document.writeln('Se usan las propiedades: ');
+  myWindow.document.write('<li>height=200</li> <li>width=300</li>');
+  myWindow.document.write('<input type=button value=Cerrar  onClick=window.close()>');
+  myWindow.document.write('</body>');
+  myWindow.document.write('</html>');" />
+  </body></html>

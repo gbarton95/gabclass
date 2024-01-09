@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2. Reloj.</title>
+  <script>
+    //inicializo el objeto Date
+    var fecha = new Date();
+
+    function hora() {
+      //tomo horas, minutos y segundos y doy formato
+      var hora = fecha.getHours();
+      var minutos = fecha.getMinutes();
+      var segundos = fecha.getSeconds();
+
+      //utilizo un método de string, padStart, que garantiza la ocupación de 2 posiciones y rellena los vacíos con '0'
+      var horaformateada = hora.toString().padStart(2, '0') + " : " + minutos.toString().padStart(2, '0') + " : " + segundos.toString().padStart(2, '0');
+
+      //esto es lo que retornaré al invocar esta función
+      return horaformateada;
+    }
+
+    function fechahoy() {
+
+      var semana = new Array('Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo');
+
+      var mes = new Array ('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+
+      var diasemana = semana[fecha.getDay()-1];
+      var diames = fecha.getDate();
+      var mesescrito = mes[fecha.getMonth()];
+      var anyo = fecha.getFullYear();
+
+      //devuelvo el día por escrito así:
+      return diasemana + ", " + diames + " " + mesescrito + " " + anyo;
+
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    //doy color a mi página principal
+    document.bgColor = 'blue';
+    var hora = hora();
+
+    //inicializo myWindow, ventana secundaria, y le doy valores y contenido
+    myWindow = window.open('', 'RELOJ DIGITAL', 'width=300,height=150');
+
+    //la coloco en su posición inicial usando mi pantalla como referencia
+    myWindow.moveTo(800, 400)
+
+    myWindow.document.write('<html><head><title>RELOJ DIGITAL</title></head>');
+
+    myWindow.document.write('<body>');
+    myWindow.document.write('HORA ACTUAL:<br>');
+    myWindow.document.write(hora);
+    myWindow.document.write('<br>FECHA ACTUAL:<br>');
+    myWindow.document.write(fechahoy());
+
+
+    myWindow.document.write('</body></html>');
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3. Diseño adaptativo.</title>
+  <style>
+    p {
+      border: 1px solid;
+      text-align: center;
+      padding: 10px;
+      height: 20px;
+      margin: auto;
+    }
+
+    /*Para pantallas de menos de 500px, muestro #peque y escondo el resto*/
+    @media screen and (max-width: 500px) {
+      #peque {
+        background-color: orange;
+        font-size: 0.8em;
+      }
+
+      #mediano,
+      #grande {
+        display: none;
+      }
+
+    }
+
+    /*Para pantallas de menos de entre 501px y 699px, muestro #mediano y escondo el resto*/
+    @media screen and (min-width: 501px) and (max-width: 699px) {
+      #mediano {
+        background-color: pink;
+        font-size: 1em;
+      }
+
+      #peque,
+      #grande {
+        display: none;
+      }
+    }
+
+    /*Para pantallas mayores de 700px, muestro #grande y escondo el resto*/
+    @media screen and (min-width: 700px) {
+      #grande {
+        background-color: lightgreen;
+        font-size: 1.2em;
+      }
+
+      #peque,
+      #mediano {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <p id="peque">Ancho &lt; 500</p>
+  <p id="mediano">700 &gt; Ancho &gt;= 500</p>
+  <p id="grande">Ancho &gt;= 700</p>
+</body>
+</html>

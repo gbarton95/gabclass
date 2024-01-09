@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3.2.1</title>
+  <script>
+    function comprueba(){
+      var cadena = prompt("Introduce un texto:");
+            if (cadena === null) {
+                alert("No has introducido nada.");
+            }else if(cadena === cadena.toUpperCase()) {
+                alert("La cadena está formada solo por mayúsculas.");
+            } else if (cadena === cadena.toLowerCase()) {
+                alert("La cadena está formada solo por minúsculas.");
+            } else {
+                alert("La cadena contiene mayúsculas y minúsculas simultáneamente.");
+            }
+    }
+  </script>
+</head>
+<body>
+  <!--1.	Comprueba si una cadena de texto introducida por el usuario está formada sólo por mayúsculas, sólo por minúsculas o por ambas simultáneamente mediante una función. Debes usar la clase String.-->
+  <button onclick="comprueba()">Comprueba mayúsculas y minúsculas</button>
+</body>
+</html>

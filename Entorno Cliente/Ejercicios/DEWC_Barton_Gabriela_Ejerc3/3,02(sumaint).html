@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="content-type" content="text/html" charset="utf-8">
+  <meta name="author" content="Gabriela Barton">
+  <title>Suma dos enteros</title>
+  <script type="text/javascript">
+    function SumaEnteros(num1,num2) {
+      if(isNaN(n1)||isNaN(n2)){
+        alert("Introduce números, por favor");
+      }else{
+        var resultado = parseInt(num1)+parseInt(num2);
+        alert("El resultado de la suma de ambos números es de "+ resultado);
+      }
+    }
+</script>
+</head>
+
+<body>
+  <script>
+    var n1 = prompt("Introduzca el primer número que quiere sumar: ");
+    var n2 = prompt("Introduzca el segundo número que quiere sumar: ");
+    SumaEnteros(n1,n2);
+  </script>
+</body>
