@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colores</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .zona {
+      position: absolute;
+      width: 50vw;
+      height: 50vh;
+    }
+
+    .zona.rojo {
+      background-color: red;
+      top: 0;
+      left: 0;
+    }
+
+    .zona.amarillo {
+      background-color: yellow;
+      top: 0;
+      left: 50vw;
+    }
+
+    .zona.azul {
+      background-color: blue;
+      top: 50vh;
+      left: 0;
+    }
+
+    .zona.verde {
+      background-color: green;
+      top: 50vh;
+      left: 50vw;
+    }
+
+  </style>
+  <script>
+    function tamanoVentanaNavegador() {
+      var dimensiones = [];
+      if (typeof (window.innerWidth) == 'number') {
+        // No es IE.
+        dimensiones = [window.innerWidth, window.innerHeight];
+      } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+        // IE 6 en modo estándar (no quirks).
+        dimensiones = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+      } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+        // IE en modo quirks.
+        dimensiones = [document.body.clientWidth, document.body.clientHeight];
+      }
+      return dimensiones;
+    }
+
+    function decirColor(color) {
+      alert("Has hecho click en el recuadro " + color);
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+      var dimensiones = tamanoVentanaNavegador();
+
+      // Asignar eventos a las zonas
+      document.querySelector('.rojo').addEventListener('click', function () {
+        decirColor('rojo');
+      });
+
+      document.querySelector('.amarillo').addEventListener('click', function () {
+        decirColor('amarillo');
+      });
+
+      document.querySelector('.azul').addEventListener('click', function () {
+        decirColor('azul');
+      });
+
+      document.querySelector('.verde').addEventListener('click', function () {
+        decirColor('verde');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="zona rojo"></div>
+  <div class="zona amarillo"></div>
+  <div class="zona azul"></div>
+  <div class="zona verde"></div>
+</body>
+</html>

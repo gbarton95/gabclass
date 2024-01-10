@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordenadas de ratón</title>
+  <script>
+    //para que funcione en todos los navegadores
+    function posicionMouse() {
+      var evento = window.event;
+      var clienteX = evento.clientX;
+      var clienteY = evento.clientY;
+      var ventanaX = evento.screenX;
+      var ventanaY = evento.screenY;
+      var paginaX = evento.pageX;
+      var paginaY = evento.pageY;
+      document.getElementById("clienteX").value = (clienteX);
+      document.getElementById("clienteY").value = (clienteY);
+      document.getElementById("ventanaX").value = (ventanaX);
+      document.getElementById("ventanaY").value = (ventanaY);
+      document.getElementById("paginaX").value = (clienteX);
+      document.getElementById("paginaY").value = (clienteY);
+    }
+    document.onmousemove = posicionMouse;
+  </script>
+</head>
+<body>
+  Coordenada X navegador: <input id="clienteX">
+  Coordenada Y navegador: <input id="clienteY">
+  <br><br>
+  Coordenada X pantalla: <input id="ventanaX">
+  Coordenada X pantalla: <input id="ventanaY">
+  <br><br>
+  Coordenada X absoluta: <input id="paginaX">
+  Coordenada Y absoluta: <input id="paginaY">
+</body>
+</html>

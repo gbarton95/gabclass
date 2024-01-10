@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-    <header><h1>REPASO 1ª EVALUACIÓN</h1></header>
+    <header><h1>CLASE EMPLEADO</h1></header>
     <div class="section">
         <nav></nav>
         <main>
