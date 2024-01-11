@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <script>
+    function enviar() {
+    if (formulario.alta.checked == true) {
+    formulario.action = "alta.html";
+    }
+    if (formulario.alta.checked == false) {
+    formulario.action = "baja.html";
+    }
+    formulario.submit() // Se envía el formulario.
+    }
+    </script>
+</head>
+<body>
+  <fieldset><legend>Alta/Baja</legend>
+    <form name="formulario" method="get">
+      <input type="checkbox" name="alta">
+      <input type="button" value="enviar" onclick="enviar();">
+    </form>
+  </fieldset>
+</body>
+</html>
