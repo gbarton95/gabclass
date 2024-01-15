@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover sprite</title>
+  <style>
+    @keyframes animarSprite {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -1336px 0;
+      }
+    }
+
+    .hover-sprite{
+      width: 167px; /*Ancho total entre 8 frames*/
+      height: 142px; /*Altura total*/
+      background-image: url('boy_sprite.png');
+    }
+
+    .hover-sprite:hover{
+      animation: animarSprite 1s steps(8) infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="hover-sprite"></div>
+</body>
+</html>

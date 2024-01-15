@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animación papá noel</title>
+  <style>
+    @keyframes animarSprite {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -1870px 0;
+      }
+    }
+    .sprite-container {
+      width: 187px; /*Ancho total entre 10 frames*/
+      height: 129px; /*Altura total*/
+      background-image: url('papaNoel_sprite.png');
+      animation: animarSprite 1s steps(10) infinite;
+      /* 1 segundo de animación, 10 steps/frames y repetir infinito */
+    }
+  </style>
+</head>
+<body>
+  <div class="sprite-container"></div>
+</body>
+</html>

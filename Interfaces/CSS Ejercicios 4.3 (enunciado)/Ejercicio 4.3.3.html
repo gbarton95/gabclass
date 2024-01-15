@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinosaurio</title>
+  <style>
+    @keyframes posicion {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -1705px 0;
+      }
+    }
+
+    @keyframes andar {
+      0% {
+        background-position: 0 121px;
+      }
+
+      100% {
+        background-position: -1705px 121px;
+      }
+    }
+
+    @keyframes correr {
+      0% {
+        background-position: 0 242px;
+      }
+
+      100% {
+        background-position: -1364px 242px;
+      }
+    }
+
+    @keyframes muerto {
+      0% {
+        background-position: 0 363px;
+      }
+
+      100% {
+        background-position: -1364px 363px;
+      }
+    }
+
+    @keyframes saltar {
+      0% {
+        background-position: 0 484px;
+      }
+
+      100% {
+        background-position: -2046px 484px;
+      }
+    }
+
+    .animacion {
+      width: 170px;
+      height: 119px;
+      background-image: url('dino_sprites/dinosprites.png');
+      animation: none;
+    }
+
+    form label {
+      padding-right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form id="animation">
+    <label>
+      Stop
+      <input type="radio" name="opcion" value="Stop" checked>
+    </label>
+
+    <label>
+      Idle
+      <input type="radio" name="opcion" value="Idle">
+    </label>
+
+    <label>
+      Dead
+      <input type="radio" name="opcion" value="Dead">
+    </label>
+
+    <label>
+      Walk
+      <input type="radio" name="opcion" value="Walk">
+    </label>
+
+    <label>
+      Run
+      <input type="radio" name="opcion" value="Run">
+    </label>
+
+    <label>
+      Jump
+      <input type="radio" name="opcion" value="Jump">
+    </label>
+  </form>
+
+  <div class="animacion" id="dino"></div>
+
+  <script>
+
+  </script>
+</body>
+</html>
