@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario validación</title>
+  <script>
+    //campo obligatorio
+    function validaCampo() {
+      valor = document.getElementById("campo").value;
+      if (valor == null || valor.length == 0) {
+        alert("El campo no puede ser vacío");
+        return false;
+      }
+      return true;
+    }
+
+    //campo numérico
+    function validaNum() {
+      valor = document.getElementById("telefono").value;
+      if (isNaN(valor)) {
+        alert("El campo tiene que ser numérico");
+        return false;
+      }
+      return true;
+    }
+
+    //fecha correcta
+    function validaFecha() {
+      var dia = document.getElementById("dia").value;
+      var mes = document.getElementById("mes").value;
+      var anio = document.getElementById("anio").value;
+      fecha = new Date(anio, mes, dia);
+      if (isNaN(fecha)) {
+        alert("La fecha no es correcta");
+        return false;
+      }
+      alert("La fecha introducida es: " + fecha);
+      return true;
+    }
+
+    //validar casilla de verificación
+    function validaCheck() {
+      elemento = document.getElementById("campoCondiciones");
+      if (!elemento.checked) {
+        alert("La casilla no ha sido validada");
+        return false;
+      }
+      return true;
+    }
+
+    //Mi función de validación completa:
+    function validacion(){
+      if (validaCheck() && validaFecha() && validaNum() && validaCampo()){
+        return true;
+      } else alert("Dato incorrecto")
+      return false;
+    }
+
+  </script>
+</head>
+
+<body>
+  <form action="" method="POST" onsubmit="return validacion()">
+    Nombre: <input type="text" id="nombre"><br>
+    Teléfono: <input type="number" id="telefono"><br>
+    Día: <input type="number" id="dia"> Mes: <input type="number" id="mes"> Año: <input type="number" id="anio"><br>
+    Validación: <input type="checkbox" id="campoCondiciones"><br>
+    <input type="submit" value="Enviar">
+  </form>
+</body>
+</html>
