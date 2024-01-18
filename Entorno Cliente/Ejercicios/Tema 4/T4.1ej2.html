@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8" >
 		<title>Ejercicio 4.1.2</title>
 		<style>
 			body { margin: 0px }
@@ -14,34 +13,34 @@
 		</style>
 		<script>
 			function mostrarInformacion(elEvento) {
-				
+
 				var evento = elEvento || window.event; // OR.
-				
+
 				var coordenadaX = evento.clientX; // Posición capturada en la coordenada X al pulsar.
 				var coordenadaY = evento.clientY; // Posición capturada en la coordenada Y al pulsar.
 				//alert ("Posición capturada: Horizontal " + coordenadaX + "px Vertical " + coordenadaY + "px");
-				
+
 				var dimensiones = tamanoVentanaNavegador(); // Tamaño o dimensiones X e Y de la ventana del navegador.
-				
+
 				var tamanoX = dimensiones[0]; // La función proporcionada devuelve el tamaño horizontal de la ventana del navegador.
 				var tamanoY = dimensiones[1]; // La función proporcionada devuelve el tamaño vertical de la ventana del navegador.
 				//alert ("Tamaño ventana: Horizontal " + tamanoX + "px Vertical " + tamanoY + "px");
-				
+
 				var posicionHorizontal = ""; // Inicialización variable.
 				var posicionVertical = "";
-				
+
 				if (coordenadaX > tamanoX/2) {
 					posicionHorizontal = "derecha"; // Si la posición horizontal capturada es mayor de la mitad del total de la ventana del navegador.
 				} else {
 					posicionHorizontal = "izquierda"; // Si la posición horizontal capturada es menor o igual de la mitad del total de la ventana del navegador.
 				}
-				
+
 				if (coordenadaY > tamanoY/2) {
 					posicionVertical = "abajo"; // Si la posición vertical capturada es mayor de la mitad del total de la ventana del navegador.
 				} else {
 					posicionVertical = "arriba"; // Si la posición vertical capturada es menor o igual de la mitad del total de la ventana del navegador.
 				}
-				
+
 				if (posicionHorizontal == "izquierda" && posicionVertical == "arriba") { // Asignación del color a la posición.
 					alert("rojo");
 				} else if (posicionHorizontal == "derecha" && posicionVertical == "arriba") {
@@ -52,11 +51,11 @@
 					alert("azul");
 				}
 			}
-			
+
 			function tamanoVentanaNavegador() { // Finding the size of the browser window.
 			// Adaptada de http://www.howtocreate.co.uk/tutorials/javascript/browserwindow
 				var dimensiones = [];
-				
+
 				if (typeof(window.innerWidth) == 'number') {
 					// No es IE.
 					dimensiones = [window.innerWidth, window.innerHeight];
@@ -67,12 +66,12 @@
 					// IE en modo quirks.
 					dimensiones = [document.body.clientWidth, document.body.clientHeight];
 				}
-				
+
 				return dimensiones;
 			}
-			
+
 			document.onclick = mostrarInformacion; // Al pusar sobre el documento Web, se ejecuta la función "mostrarInformacion" (manejador de evento semántico).
-			
+
 		</script>
 	</head>
 	<body>
@@ -83,18 +82,17 @@
 			<div id="azul"></div>
 		</div>
 	</body>
-</html>
 
 <!--
 	Para definir los cuadros mediante CSS existen varias opciones:
-    
-	- Contenedor con "position" "absolute" o "fixed" y anchura y altura el 100%. 
+
+	- Contenedor con "position" "absolute" o "fixed" y anchura y altura el 100%.
 	Los "div" internos "static" (el atributo "position" no se hereda), pero se ponen "float"
 	para poder tener 2 por fila. Al tener la referencia "padre", coge la altura con el 50%.
-    
+
 	- Observa qué pasa si se definen sin contenedor, por ejemplo poniendo el "position" en
 	"absolute" para todos.
-    
+
 	- Si se dejan como "static", para que cojan el 50% de alto habría que definir en el CSS
 	tanto la altura del HTML como la del "body" con 100%.
 -->
