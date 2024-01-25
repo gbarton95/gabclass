@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejercicio 5.1.3</title>
+		<script>
+			//Cuidado, sin esta línea de onload no funcionaría
+			//Necesita estar totalmente cargada la página
+      window.onload = function() {
+  			document.getElementById("id_link").onclick = atributosEnlace;
+
+				function atributosEnlace() {
+					var listaAtributos = this.attributes;
+					alert("Segundo atributo: " + listaAtributos[1].nodeName + "\nValor: " + listaAtributos[1].nodeValue);
+				}
+		}
+		</script>
+	</head>
+	<body>
+    <a href="#" id="id_link" title="Enlace de prueba" onclick="atributosEnlace(this)">Pulsa aquí</a>
+	</body>
+</html>

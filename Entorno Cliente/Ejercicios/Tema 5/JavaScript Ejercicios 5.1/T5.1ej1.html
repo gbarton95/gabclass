@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejercicio 5.1.1</title>
+	</head>
+	<body>
+		<button id="pinchable">Pulsa el botón</button>
+		<script>
+			document.getElementById("pinchable").onclick = muestraMensaje; // Manejador de evento semántico.
+
+			var elemento = 0;
+
+			function muestraMensaje() {
+				elemento = elemento + 1;
+				if(elemento==5){
+					alert("Se ha pulsado el botón más de 5 veces");
+				}
+			}
+		</script>
+	</body>
+</html>
+
+<!--
+	Manejadores de eventos semánticos:
+	http://iescamtecnologia.blogspot.com/2016/09/manejadores-de-eventos-semanticos.html
+	http://dis.um.es/~lopezquesada/documentos/IES_1314/IAW/curso/UT7/libroswebjavascript/www.librosweb.es/javascript/capitulo6/modelo_basico_de_eventos1.html
+-->

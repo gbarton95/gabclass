@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Ejercicio 5.1.2</title>
+		<script>
+			function cargar() {
+				alert("Se va a eliminar el texto de la página");
+
+				document.getElementById("textoweb").innerHTML = "Nuevo texto";
+
+				alert("Texto sobreescrito");
+			}
+		</script>
+	</head>
+	<body onload="cargar()">
+		<p id="textoweb">
+			Este texto quedará anulado al cargar el script.
+		</p>
+	</body>
+</html>
+
+<!--La otra opción sería quitar el onload al body y ponerlo en el script como
+	window.onload=function() {...-->
