@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, charset=utf-8" />
+  <title>Naturaleza - Inicio</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/principal.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <header class="container-fluid my-4 row align-items-center justify-content-evenly">
+    <a href="index.html" id="logo" class="col-sm-auto">
+      <img src="images/004-hoja-2.png" alt="logo" class="img-fluid">
+    </a>
+    <div class="col-sm-auto">
+      <h1 class="text-center fw-bold titulo">Lo mejor de la naturaleza</h1>
+    </div>
+  </header>
+
+  <!-- Menú de navegación -->
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid ms-5">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Paisajes</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="desiertos.html">Desiertos</a></li>
+              <li><a class="dropdown-item" href="polos.html">Zonas árticas</a></li>
+              <li><a class="dropdown-item" href="selvas.html">Selvas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Párrafos entre los bloques de imágenes -->
+  <div class="container my-4">
+    <h3 class="text-center">Ártico: Un Mundo de Hielo y Fauna Única</h3>
+    <p>La región del Ártico, situada en el extremo norte de la Tierra, es conocida por sus vastos paisajes de hielo y
+      nieve. Hogar de una diversidad de vida silvestre adaptada a condiciones extremas, el Ártico alberga osos polares,
+      renos y diversas especies de aves marinas. A pesar de las duras condiciones climáticas, el Ártico despierta
+      fascinación por su belleza natural y por ser un indicador clave de los cambios climáticos globales.</p>
+  </div>
+
+  <!-- Cards -->
+  <div class="container my-4 row col-md-6 mx-auto">
+    <div class="card card-deck">
+      <div class="card my-2 bg-primary">
+        <img src="images/polos4.jpg" class="card-img-top" alt="Primera imagen">
+        <div class="card-body">
+          <h5 class="card-title">Una pared glaciar</h5>
+          <p class="card-text">Sumérgete en la serenidad de un paisaje ártico sin fin, donde la nieve y el hielo se
+            encuentran con un cielo claro, creando una escena tranquila y etérea en el corazón del Ártico.</p>
+        </div>
+      </div>
+      <div class="card my-2 bg-secondary">
+        <img src="images/polos5.jpg" class="card-img-top" alt="Segunda imagen">
+        <div class="card-body">
+          <h5 class="card-title">El mismo glaciar, impasible en el tiempo</h5>
+          <p class="card-text">Únete a una emocionante expedición polar donde la inmensidad del hielo y la nieve te
+            sumergirá en un paisaje único y deslumbrante.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <h3 class="text-center">Antártida: El Continente Blanco y su Importancia Científica</h3>
+      <p>En el extremo sur del planeta, la Antártida se presenta como un vasto continente blanco cubierto en su
+        mayoría
+        por hielo. Esta región inhóspita es fundamental para la investigación científica debido a su aislamiento y a
+        la
+        preservación de registros climáticos antiguos. Además, la fauna antártica, como pingüinos y focas, ha
+        desarrollado
+        adaptaciones únicas para sobrevivir en un entorno tan desafiante.</p>
+    </div>
+
+    <!--Carousel-->
+    <div class="container my-4 row col-md-6 mx-auto">
+      <div class="carousel slide carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/polos1.jpg" class="d-block w-100" alt="Primera imagen">
+        </div>
+        <div class="carousel-item">
+          <img src="images/polos2.jpg" class="d-block w-100" alt="Segunda imagen">
+        </div>
+        <div class="carousel-item">
+          <img src="images/polos3.jpg" class="d-block w-100" alt="Tercera imagen">
+        </div>
+        <!--controladores-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container my-4">
+      <h3 class="text-center">Cambios en las Zonas Polares: Desafíos y Consecuencias</h3>
+      <p>Las zonas polares están experimentando cambios notables debido al calentamiento global. El deshielo en el
+        Ártico
+        y la Antártida tiene consecuencias a nivel mundial, afectando los patrones climáticos y elevando el nivel del
+        mar.
+        Este fenómeno plantea desafíos ambientales y socioeconómicos, subrayando la importancia de comprender y
+        abordar
+        los impactos del cambio climático en estas regiones únicas.</p>
+    </div>
+
+    <p class="row col-md-6 mx-auto">
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#contenidoAdicional" role="button"
+        aria-expanded="false" aria-controls="contenidoAdicional">
+        Mostrar/Ocultar contenido Adicional
+      </a>
+    </p>
+    <div class="collapse" id="contenidoAdicional">
+      <div class="card card-body">
+        <h3>Preservación y Cooperación Internacional en las Zonas Polares</h3>
+        <p>Dada la importancia de las zonas polares para el equilibrio ambiental global, la cooperación internacional se
+          vuelve esencial. La preservación de estos ecosistemas frágiles requiere esfuerzos conjuntos para limitar la
+          explotación de recursos y mitigar los efectos del cambio climático. Iniciativas como el Tratado Antártico
+          demuestran la capacidad de las naciones para trabajar juntas en la protección de estos ambientes únicos y
+          vulnerables.</p>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- Pie de página -->
+    <div class="pie container-fluid bg-dark d-flex align-items-center p-3">
+      <div class="container">
+        <p class="text-white m-0">Gabriela Barton | DIW | Sitio Bootstrap</p>
+      </div>
+    </div>
+
+</body>
+
+</html>
