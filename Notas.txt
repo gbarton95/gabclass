@@ -1,0 +1,440 @@
+
+
+////////////////////////////////PRIMERA EVALUACIÓN//////////////////////////////////
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~15/09/23
+
+ENTORNO SERVIDOR
+
+ >>>PHP es una herramienta poderosa para crear aplicaciones web dinámicas y sitios web interactivos.
+    Se utiliza en una amplia gama de aplicaciones, desde blogs y sitios web personales hasta aplicaciones
+    empresariales complejas y redes sociales.
+
+>>> Cualquier variable lleva $ delante
+
+>>> Para que se vayan ejecutando en PHP las acciones que quiero, se lo pido con un echo:
+	echo "...";
+	echo "<form action='prueba.php' method...>";
+
+>>> Si abro el echo con comillas dobles ("), los nombres internos los delimitaré con comillas simples (') o viceversa.
+
+	echo '<form action="prueba.php" method...>';
+
+>>> puedo concatenar con puntos o comas. Por ejemplo:
+
+	echo "Hola $nombre !";
+		o
+	echo "Hola",$nombre,"!";
+	
+>>> Ejemplos de bucles:
+	$i=1;
+	while($i<=100){
+		echo $i."<br/>";
+		$i++;
+	}
+
+
+	for($i=0; $i<=100; $i++){
+		echo $i."<br/>";
+	}
+
+>>> Formulario: cuando queremos recoger información y enviarlo a algún lado. Por ejemplo, a nuestro archivo PHP.
+	
+>>> Para abrir html en navegador, prueba con CTRL+ALT+L+C
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~22/09/23
+
+
+ENTORNO SERVIDOR
+
+markdown-es/sintaxis-markdown/
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~29/09/23
+
+ENTORNO SERVIDOR
+
+cada vez que subimos a un servidor remoto, es necesario hacer hugo -d docs (para que cree todo el directorio)
+
+Cualquier cosa que queramos modificar se copia a nuestro directorio
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~04/10/23
+
+ENTORNO SERVIDOR
+
+archetype: tiene un default.md (define cómo se van a construir todos los archivos nuevos que se vayan añadiendo al sitio)
+
+en hugo siempre se crean, en layouts, las carpetas '_default' y 'partials'. 
+
+Dentro de aquí es donde ponemos nuestras plantillas parciales.
+
+Dentro de default tendremos baseof.html, list.html, y single.html
+
+>>Todas las variables de hugo empiezan por mayúscula
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~10/11/23
+
+DESPLIEGUE DE APLICACIONES
+
+- git init: crea subdirectorio .git que contiene el esqueleto del respositorio de Git para empezar a desarrollar.
+
+- git fetch: descarga cambios realizados en el repositorio remoto
+- git merge: aplica los cambios descargados a la rama en la que nos encontramos
+- git pull: fetch+merge
+
+- git commit: Confirma los cambios realizados (git commit -m "mensaje")
+
+- git push origin <nombrerama>: Sube la rama al servidor remoto
+
+- git status: muestra el estado actual de la rama, así como cambios sin commitear
+
+- git add: NO es subir; comienza a seguir el archivo
+
+- git checkout -b <nombreramanueva>: Creamos nueva rama y nos metemos en ella
+- git checkout -t origin/<nombrerama>: Volvemos a rama anterior guardando rama en local
+
+- git branch: Muestra todas las ramas locales
+- git branch -a: Muestra todas las ramas locales y remotas
+
+
+
+
+
+ENTORNO SERVIDOR
+
+Tengo que hacer un formulario php.
+
+Normalmente:
+
+	<form action="#" .....
+	(((cuadritos, textos, etc.)))
+		<input type="submit" name="botonenviar" value="enviar">
+	</form>
+
+el php:
+	if(!$_GET){
+		enseño formulario
+	}else{
+		proceso los datos del formulario
+	}
+
+Pero hoy, tenemos DOS formularios seguidos.
+Sería:
+
+	if(!$_GET){
+		enseño formulario
+	}else{
+		if(!$_GET[datoqueaúnnotengo]){
+			enseño el SEGUNDO formulario
+			en base a la info del primero
+			y pido ese dato que aún no tengo
+		}else{
+			proceso datos finales.
+	}
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~13/11/23
+
+
+DESPLIEGUE DE APLICACIONES ¡¡¡cae en examen!!!
+
+(Vídeo: Qué es Git y cómo funciona, la mejor explicación en español)
+Posibles preguntas de examen: 
+¿Qué es Git? 
+¿Para qué sirve Git? 
+¿Por qué usamos Git?
+¿Qué es una rama?
+¿Diferencia entre rama y desvío(fork)?
+¿Código libre vs privado?
+¿Diferencia entre git init y git clone?
+¿Qué es importante poner en los archivos nuevos de repositorio? COMENTARIOS
+
+*Nunca trabajamos con el proyecto padre, SIEMPRE con la rama de desarrollo*
+
+
+	--Máquinas virtuales
+
+RAM - Al crear máquinas virtuales, se recomienda darles la mitad de la RAM de mi equipo
+DISCO DURO - Para hacer un Ubuntu de pruebas, le daremos 25GB de disco duro virtual
+ARRANCAR - Antes de arrancar, hay que modificar algunos parámetros en Configuración
+	(Por ejemplo, si se puede, habilitar las características extendidas del procesador en Sistema;
+	en General-Avanzado activar el portapapeles compartido;
+	en Pantalla, elevar la memoria de vídeo al máximo, 128MB, y habilitar acelerador 3D...)
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~15/11/23
+
+ENTORNO SERVIDOR
+
+Ejercicio 1: ¿Por qué no me funciona el 'or die'?
+Ejercicio 2: if(isset($_REQUEST...))
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~27/11/23
+
+DESPLIEGUE DE APLICACIONES:
+
+LAMP -> lo difícil va a ser la L y la P             
+
+ISP  (al que le pago el internet)
+
+Estamos viendo DNS, Firewall, IPs, diferencia entre http(80) y https(8080), UFW, tracer, caché
+"A wordpress le gustan las conexiones seguras"
+
+
+
+
+////////////////////////////////SEGUNDA EVALUACIÓN//////////////////////////////////
+
+
+
+3 entregas de proyecto.
+	1- Planteamiento
+	2- Mockups
+	3- Unificación y corrección
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~18/12/23
+
+
+DESPLIEGUE DE APLICACIONES:
+
+
+RED- IP
+CAPA DE TRANSPORTE- UDP
+CAPA DE APLICACIÓN- DHCP
+
+pregunta de examen:
+---> VENTAJAS E INCONVENIENTES DEL USO DE SERVICIOS DE CONFIG. AUTOMÁTICA DE RED
+---> Qué es el spoofing (sistema de pirateo antiguo)
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~08/01/23
+
+
+PROYECTO DE FIN DE GRADO:
+
+Integrar todas las asignaturas posibles: INGLÉS (trabajo y/o presentación), EMPRESA+FOL (contabilidad, cuentas), BASES DE DATOS, PROGRAMACIÓN...
+
+
+
+DESPLIEGUE DE APLICACIONES:
+
+PHP tiene varias versiones, y cuando le pedimos a Ubuntu que instale PHP instalará la última versión ESTABLE, no la más nueva. (A fecha de hoy, PHP 8.1)
+
+!!! Tener en cuenta que en la implantación de servicios de red en Linux, concretamente HTTP, hay que desactivar el firewall (-u fw)
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~11/01/23
+
+
+EMPRESA
+
+CNAE>>>6201
+IAE>>>763
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~12/01/23
+
+PROYECTO FINAL:
+
+Si pongo una guía de uso, en Anexos. Lo mismo con manual.
+HAY QUE PONER COOKIES
+DAFO (aparición rápida en powerpoint, no perder tiempo)
+
+
+DESPLIEGUE APLICACIONES:
+
+1 - 2 - 3 - 4 - 5 pasos para la Implantación de Arquitecturas
+
+1.- Qué necesito? Planificación con lápiz y boli
+2.- Instalación de los componentes necesarios
+3.- Configuración de la aplicación
+4.- Prueba de la aplicación
+5.- 
+
+Además: Medidas de seguridad (firewall, cifrado, detección de intrusiones), copias de seguridad y Monitoreo
+
+((Toda pieza móvil es susceptible de joderse por uso))
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~16/01/23
+
+ENTORNO CLIENTE:
+
+onsubmit OBLIGATORIAMENTE tiene que tener un 'return':
+
+<input action="whatever.html" method="post" onsubmit="return function();">
+
+Nos recomienda el canal de youtube de Ada Lovecode (curso javascript)
+
+INTERFACES
+Un vídeo embebido se hace con iframe
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~19/01/23
+
+DESPLIEGUE DE APLICACIONES:
+
+Los componentes de un equipo informático debe tener entrada, salida o ambas.
+
+CUIDADO entre bits y Bytes y su equivalencia inexacta (1 Byte = 8 bits)
+
+Redes:
+
+por *Area de Distribucion*
+- PAN -> Red de Area Personal (Personal Area Network) pequeñita. Bluetooth.
+- LAN -> Red de Area Local (Local Area Network) tamaño peque-mediano. Casa.
+- MAN -> Red de Area Metropolitana (Metropolitan...) red de alta velocidad (banda ancha) que da cobertura a un área geográfica, como la fibra óptica de una ciudad.
+- WAN -> Red de Area Amplia (Wide Area Network) intercontinental, por satélite. 
+
+por *Relación Funcional*
+- Cliente-Servidor
+- Peer-to-Peer(P2P)
+
+por *Tecnología*
+- Point-to-Point: Parejas individuales de máquinas. Un switch.
+- Broadcast: Un canal para varias máquinas. 
+
+por *Topología física* (cableado)
+- Bus, troncal o backbone...
+
+
+Cuidado con el ferrari con ruedas de madera: Cuando compramos componentes, que vayan acorde al equipo y a las necesidades.
+
+IEEE 802.11
+
+"Del router 'pa dentro, red privada. Del router para fuera, público."
+"El ping es como llamar a la puerta: Llamas y ves cuánto tarda en contestar"
+"La MAC es el DNI físico de la tarjeta, y la IP es la DNI de una conexión. En una red no debe haber dos MACs o IPs iguales."
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~22/01/23
+
+TRABAJO FIN DE GRADO:
+
+- NO usar fuentes más antiguas de 3 años.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~02/02/23
+
+EMPRESA:
+
+3 diferencias entre préstamo y crédito
+PRÉSTAMO- Una vez concedido te lo dan íntegro. Te cobran los intereses sobre el total, y también te cobran por hacerte el estudio. La cuota es la misma (los intereses). Es a largo plazo. Se utiliza para financiar inversiones.
+CRÉDITO- Ponen a tu disposición una cantidad que puedes usar o no. Es a corto plazo: en menos de un año la tienes que devolver. Cuando vence el periodo de crédito tiene que estar de vuelta todo el dinero que se pidió. 
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~16/02/23
+
+Cuidao: el root puede ser superusuario en su sistema, pero cuando queremos acceder desde fuera está bastante capado. Tenerlo en cuenta. Además, establecer conexión 'puente' y abrir puertos 20/21
+
+
+
+EMPRESA
+
+Tema 6:
+130 (qué/cuánto paga un autónomo)
+131 (empresario individual y autónomo)
+132 (ERL)
+133 (Sociedad Limitada. CUIDADO: capital mínimo=1€, y en impuestos, el impuesto de sociedades es del 15%-23%)
+135 (todo, excepto apartado C, NO EXISTE SOCIEDAD LIMITADA NUEVA EMPRESA)
+137 NO
+138 (PAE)
+139 (entera)
+141 (entera)
+
+Tema 7:
+153 (entera: Análisis de costes /caerá ejercicio)
+155 (Umbral de rentabilidad o punto muerto, y cae ejercicio. Sin gráfico)
+157 (Ejercicio de either: precio de venta, precio técnico...)
+
+Tema 8:
+163 (Inversión y gasto: qué es y cuáles son)
+165 (Financiación de la empresa)
+167 (A y B1, B2 NO)
+169 (Autofinanciacion: Reservas y amortizaciones. Préstamo bancario: TIN/TAE, qué es un avalista...)
+171 (Diferencia entre préstamo y crédito. Leasing y renting)
+173 (D, F y "confirming")
+175 (Tipos de subvenciones: ICO, ENISA, crowdfunding)
+
+Tema 9:
+181 -- Hacer un balance (PRÁCTICO)
+185 -- Cuenta de resultados (pérdidas y ganancias) (no lo pone)
+Tipos de IVA: general (21%), reducido (10%) y superreducido (4% o incluso 0%)
+A partir de 2025 será obligatoria factura electrónica y código QR
+
+
+
+Tema 4 y 5 ejercicios y tipo test
+Tema 6 (Ajax y jQuery: test y pregunta de desarrollo)
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~26/02/23
+
+
+EXAMEN DESPLIEGUES:
+
+(20%) 20 preguntas tipo test sacadas de los que ya hemos hecho 
+(80%) 4 preguntas de desarrollo: 3 de FTP y SSH. Incluye: crear usuarios, capar usuarios, dar permisos, puertos, enjaular, capar una IP por ssh, capar anonimo, qué archivos son los conf., instrucciones (deny/allow user...). La cuarta pregunta es de teoría, en UD02 despliegue de una app web y UD03 implantación de arquitecturas (qué medidas de seguridad implantarías en... permisos, firewalls, etc. // Qué tecnologías necesitaríamos para desplegar una app web, tecnologías y herramientas y sus requisitos // Diferencias entre un servidor web y un servidor de apliaciones // Cómo podríamos aumentar la seguridad de un servidor)
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~27/02/24
+
+SERVIDOR:DE REPASO_EVA2
+
+PREGUNTAR MASTER.BLADE LINEA 20
+En web.php, línea 27. Por qué interrogante??
+
+Terminar OrderController
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~28/02/24
+
+
+Te puede pedir:
+
+cuando haces la migración, dentro de la función up:
+$table->dato: de tipo nullable(), de tipo unique(), default(null),... (para que algo sea default(null) tiene que ser nullable por narices)
+
+Para añadir columna a una tabla por migración, la nomenclatura sería: php artisan make:migration add_column_id_to_table --table=tabla
+
+Ejecutar todas las migraciones: migrate:fresh --seed
+
+Las llamadas a todos los seeders se hacen en DatabaseSeeder
+
+Establecer relacion de un modelo: 1-1 hasOne; 1-N hasMany/belongsTo
+
+Lógica laravel:
+Action del formulario=ruta; ruta=controlador(metodo); metodo=return.view; view ok
+
+
+Botón que lleva a un sitio:
+<form action="{{route( cosa.index )}}"><boton de SUBMIT>
+
+El enrutador lee de arriba a abajo: si hay un conflicto, cogerá lo primero que funcione.
