@@ -5,9 +5,9 @@
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>Ejercicio 6.1.7</title>
 		<style>
 		a img {
@@ -26,17 +26,19 @@
 		<script src="jquery-3.6.1.min.js"></script>
 		<script>
 			$(document).ready(function() {
-
+				$('a img').click(function() {
+					$(this).slideUp();
+				});
 			});
 		</script>
 	</head>
 	<body>
 		<div id="imagenes">
-			<a href="index.php"> <img src="imagenes/inicio.gif" /></a> <a
-				href="pisos.html"> <img src="imagenes/pisos.gif" />
-			</a> <a href="cocinas.html"> <img src="imagenes/cocinas.gif" />
-			</a> <a href="banos.html"> <img src="imagenes/baños.gif" />
-			</a> <a href="contactar.html"> <img src="imagenes/contactar.gif" /></a>
+			<a href=""> <img alt="imgag" src="imagenes/inicio.gif"></a>
+			<a href=""> <img alt="imgag" src="imagenes/pisos.gif"></a>
+			<a href=""> <img alt="imgag" src="imagenes/cocinas.gif"></a>
+			<a href=""> <img alt="imgag" src="imagenes/baños.gif"></a>
+			<a href=""> <img alt="imgag" src="imagenes/contactar.gif"></a>
 		</div>
 	</body>
 </html>

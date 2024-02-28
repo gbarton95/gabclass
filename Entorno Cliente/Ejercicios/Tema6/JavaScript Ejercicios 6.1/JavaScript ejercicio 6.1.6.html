@@ -5,9 +5,9 @@
 -->
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>Ejercicio 6.1.6</title>
 		<style>
 			div {
@@ -20,6 +20,17 @@
 			}
 		</style>
 		<script src="jquery-3.6.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#left').click(function() {
+					$('.block').animate({left: '-=500px'}, 'fast');
+				});
+
+				$('#right').click(function() {
+					$('.block').animate({left: '+=500px'}, 'fast');
+				});
+			});
+		</script>
 	</head>
 	<body>
 		<button id="left">&laquo;</button>

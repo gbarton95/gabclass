@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="ES">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>Ejercicio 4.2.1 - Expresiones regulares con JavaScript</title>
 		<script>
 			do {
 				var nombre = prompt("Escribe tu nombre");
 			} while (!comprobar_campos(nombre, "texto"));
-			
+
 			do {
 				var apellido = prompt("Escribe tu apellido");
 			} while (!comprobar_campos(apellido, "texto"));
-			
+
 			do {
 				var dni = prompt("Escribe tu DNI");
 			} while (!comprobar_campos(dni, "dni"));
-			
+
 			do {
 				var tel = prompt("Escribe tu teléfono");
 			} while (!comprobar_campos(tel, "telefono"));
-			
+
 			do {
 				var email = prompt("Escribe tu correo electrónico");
 			} while (!comprobar_campos(email, "correo"));
-			
+
 			 // Mostramos los datos:
 			document.write("Nombre:" + nombre + "<br/>");
 			document.write("Apellido:" + apellido + "<br/>");
 			document.write("DNI:" + dni + "<br/>");
 			document.write("Teléfono:" + tel + "<br/>");
 			document.write("e-mail:" + email);
-			
+
 			function comprobar_campos(cadena, tipo_campo) {
 				switch (tipo_campo) {
 					case "texto":
