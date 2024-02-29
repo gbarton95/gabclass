@@ -59,7 +59,9 @@
     
           // Crear un nuevo elemento
           var nuevoElemento = document.createElement('p');
-          nuevoElemento.textContent = '¡Hola, soy un nuevo párrafo!';
+          //nuevoElemento.textContent = '¡Hola, soy un nuevo párrafo!';
+          //nuevoElemento.appendChild(document.createTextNode('¡Hola, soy un nuevo párrafo!'));
+          nuevoElemento.innerHTML = '¡Hola, soy un nuevo párrafo con <strong>HTML</strong>!';
     
           // Añadir el nuevo elemento como hijo del elemento existente
           miElemento.appendChild(nuevoElemento);
@@ -74,7 +76,10 @@
           console.log(miElemento.nodeType); // Devuelve 1 (ELEMENT_NODE)
     
           // Imprimir el valor del primer hijo de miElemento
-          console.log(miElemento.firstChild.nodeValue);
+          var primerhijo = miElemento.firstElementChild; //CUIDADO CON USAR FIRSTCHILD QUE PUEDE SER UN ESPACIO EN BLANCO
+          alert(primerhijo.innerHTML);
+
+          console.log("HOla");
         });
       </script>
     </head>
