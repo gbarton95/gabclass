@@ -1,0 +1,89 @@
+<!-- 
+    ***Métodos del Objeto Node:***
+
+        appendChild(node):
+        Añade un nuevo nodo como el último hijo del nodo actual.
+
+        hasChildNodes():
+        Devuelve un booleano indicando si el nodo tiene hijos.
+
+        insertBefore(newNode, referenceNode):
+        Inserta un nuevo nodo (newNode) antes de un nodo de referencia (referenceNode) que ya es hijo del nodo actual.
+
+        removeChild(node):
+        Elimina un nodo hijo específico del nodo actual.
+
+        replaceChild(newNode, oldNode):
+        Reemplaza un nodo hijo (oldNode) con otro (newNode).
+
+    ***Propiedades del Objeto Node:***
+
+        childNodes:
+        Devuelve una NodeList que representa una lista de nodos hijos.
+
+        firstChild:
+        Devuelve el primer nodo hijo del nodo actual.
+
+        lastChild:
+        Devuelve el último nodo hijo del nodo actual.
+
+        nextSibling:
+        Devuelve el siguiente nodo hermano del nodo actual.
+
+        parentNode:
+        Devuelve el nodo padre del nodo actual.
+
+        previousSibling:
+        Devuelve el nodo hermano anterior del nodo actual.
+
+        nodeType:
+        Devuelve el tipo de nodo como un número entero.
+
+        nodeValue:
+        Establece o devuelve el valor de un nodo, dependiendo de su tipo.
+    
+
+        EJEMPLO DE USO:
+    -->
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ejemplo de Node en HTML</title>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Obtener un elemento existente
+          var miElemento = document.getElementById('miElemento');
+    
+          // Crear un nuevo elemento
+          var nuevoElemento = document.createElement('p');
+          nuevoElemento.textContent = '¡Hola, soy un nuevo párrafo!';
+    
+          // Añadir el nuevo elemento como hijo del elemento existente
+          miElemento.appendChild(nuevoElemento);
+    
+          // Clonar el nodo actual y su contenido
+          var clonElemento = miElemento.cloneNode(true);
+    
+          // Insertar el nodo clonado antes del elemento existente
+          miElemento.parentNode.insertBefore(clonElemento, miElemento);
+    
+          // Imprimir el tipo de nodo
+          console.log(miElemento.nodeType); // Devuelve 1 (ELEMENT_NODE)
+    
+          // Imprimir el valor del primer hijo de miElemento
+          console.log(miElemento.firstChild.nodeValue);
+        });
+      </script>
+    </head>
+    <body>
+    
+      <div id="miElemento">
+        <p>¡Hola, soy un párrafo existente!</p>
+      </div>
+    
+    </body>
+    </html>
+   
