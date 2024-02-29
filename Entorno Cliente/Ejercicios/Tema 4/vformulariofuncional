@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Datos Personales</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Formulario de Datos Personales</h2>
+
+  <form id="miFormulario" onsubmit="return validarFormulario()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" required>
+    <br>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" pattern="\d{8}[a-zA-Z]" required>
+    <span id="errorDNI" class="error"></span>
+    <br>
+
+    <label>Género:</label>
+    <label for="hombre"><input type="radio" id="hombre" name="genero" value="hombre"> Hombre</label>
+    <label for="mujer"><input type="radio" id="mujer" name="genero" value="mujer"> Mujer</label>
+    <br>
+
+    <label for="foto">Incluir mi foto:</label>
+    <input type="file" id="foto" name="foto">
+    <br>
+
+    <label><input type="checkbox" id="publicidad" name="publicidad"> Incluir publicidad</label>
+    <br>
+
+    <input type="submit" value="Guardar cambios">
+    <input type="reset" value="Resetear formulario">
+  </form>
+
+  <script>
+    function validarFormulario() {
+      var dni = document.getElementById('dni').value;
+      var regexDNI = /^\d{8}[a-zA-Z]$/;
+
+      if (!regexDNI.test(dni)) {
+        document.getElementById('errorDNI').innerHTML = 'Formato de DNI no válido.';
+        return false;
+      } else {
+        document.getElementById('errorDNI').innerHTML = '';
+        return true;
+      }
+    }
+  </script>
+
+</body>
+</html>
