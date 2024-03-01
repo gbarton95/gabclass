@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2. Validación de formulario.</title>
+  <style>
+    form {
+      width: fit-content;
+    }
+  </style>
+  <script>
+    //Función que devuelve 'true' si el campo numerocuenta tiene 20 dígitos numéricos
+    function numerocuentaValido() {
+      var numerocuenta = document.getElementById("numerocuenta").value;
+      var patron = /^\d{20}$/;
+      return patron.test(numerocuenta);
+    }
+
+    //Función que devuelve 'true' si el campo seis tiene 6 caracteres alfanuméricos
+    function seisValido() {
+      var contenidoseis = document.getElementById("seis").value;
+      var patron = /^\w{6}$/;
+      return patron.test(contenidoseis);
+    }
+
+    //Funciones para hacer la comprobación al hacer onblur
+    function compruebanumcuenta() {
+      if(numerocuentaValido()==false) {
+        alert("El campo no se ha rellenado de forma correcta.");
+      }
+    }
+    //A esta le añado que si es válida active el siguiente campo
+    function compruebaseis() {
+      if(seisValido()==false) {
+        alert("El campo no se ha rellenado de forma correcta.");
+      } else {
+        activarextra();
+      }
+    }
+
+    //Función para activar el tercer campo
+    function activarextra() {
+      var extra = document.getElementById("extra");
+      extra.removeAttribute("readonly");
+    }
+
+    //Función para el botón de Validar
+    function yaesta() {
+      if(numerocuentaValido && seisValido) {
+        alert("Todo correcto, formulario enviado");
+      } else {
+        alert("Por favor, vuelva a introducir los datos");
+      }
+    }
+  </script>
+</head>
+<body>
+  <form name="formulario" action="" onsubmit="return yaesta()">
+    <fieldset>
+      <legend>Formulario</legend>
+      <label>Número de cuenta: </label><input type="text" size="20" id="numerocuenta" onblur="compruebanumcuenta()"><label> Tiene que tener 20 dígitos</label>
+      <br><br>
+      <label>Seis caracteres: </label><input type="text" id="seis" onblur="compruebaseis()"><label> Tienen que ser 6 exactamente</label>
+      <br><br>
+      <label>Antes relleno: </label><input type="text" id="extra" readonly><label> Si el de antes !=6, desactivado</label>
+      <br><br>
+      <input type="button" value="Validar" onclick="yaesta()">
+    </fieldset>
+  </form>
+</body>
+</html>

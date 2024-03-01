@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1. Calculadora.</title>
+  <style>
+    .p {
+      text-align: right;
+      font-family: "Arial";
+      font-size: 40px;
+      margin: 0.25cm;
+    }
+
+    .c {
+      text-align: center;
+      font-family: "Arial";
+      font-size: 40px;
+      margin: 0.25cm 0.75cm 0.25cm 0.75cm;
+    }
+
+  </style>
+  <script>
+    //Atribuyo una función onclick a todos mis elementos de clase C al cargar la página
+    function clicables() {
+      var conjunto = document.getElementsByClassName("c");
+      for (let index = 0; index < conjunto.length; index++) {
+        conjunto[index].setAttribute("onclick", "pulsar(this)");
+        console.log(conjunto[index]);
+      }
+    }
+
+    //Función al teclear sobre la calculadora:
+    function pulsar(tecla) {
+      var cifra = tecla.parentNode.getAttribute("id");
+      var cuenta = "";
+
+      if (tecla.innerText == "=") {
+        hacercuenta(cuenta);
+      } else {
+        if (tecla.innerText == "+" ||
+          tecla.innerText == "-" ||
+          tecla.innerText == "/" ||
+          tecla.innerText == "x"
+        ) {
+          cuenta = cuenta + cifra;
+          document.getElementById("pantalla").innerText = cifra;
+        } else if (document.getElementById("pantalla").innerText != 0) {
+          document.getElementById("pantalla").innerText += cifra;
+        } else {
+          document.getElementById("pantalla").innerText = cifra
+        }
+      }
+
+
+    }
+
+    //Función para hacer la cuenta:
+    function hacercuenta(string) {
+      var arraynum = string.split("+", "-", "/", "x")
+      //SINTERMINAR
+      alert(string[0]);
+      //return resultado;
+    }
+
+  </script>
+</head>
+
+<body onload="clicables()">
+  <form>
+    <div>
+      <table border="2">
+        <tr>
+          <td colspan="5">
+            <div class="p" id="pantalla"> 0 </div>
+          </td>
+        </tr>
+        <tr>
+          <td id="7">
+            <div class="c">7</div>
+          </td>
+          <td id="8">
+            <div class="c">8</div>
+          </td>
+          <td id="9">
+            <div class="c">9</div>
+          </td>
+          <td id="/">
+            <div class="c">/</div>
+          </td>
+          <td id="C">
+            <div class="c">C</div>
+          </td>
+        </tr>
+        <tr>
+          <td id="4">
+            <div class="c">4</div>
+          </td>
+          <td id="5">
+            <div class="c">5</div>
+          </td>
+          <td id="6">
+            <div class="c">6</div>
+          </td>
+          <td id="x">
+            <div class="c">x</div>
+          </td>
+          <td id="=" rowspan="3">
+            <div class="c">=</div>
+          </td>
+        </tr>
+        <tr>
+          <td id="1">
+            <div class="c">1</div>
+          </td>
+          <td id="2">
+            <div class="c">2</div>
+          </td>
+          <td id="3">
+            <div class="c">3</div>
+          </td>
+          <td id="-">
+            <div class="c">-</div>
+          </td>
+        </tr>
+        <tr>
+          <td id="0" colspan="3">
+            <div class="c">0</div>
+          </td>
+          <td id="+">
+            <div class="c">+</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</body>
+</html>
