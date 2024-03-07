@@ -1,0 +1,33 @@
+.primerejercicio {
+	border: 5px solid red;
+}
+
+.celda {
+	border: 5px solid blue;
+}
+
+.no-gutters {
+	margin: 0px;
+	padding: 0px;
+}
+
+.fila {
+	border: 1px solid red;
+	height: 100px;
+}
+
+.navbar {
+	background-color: rgb(30, 105, 89);
+}
+
+.btn-enviar {
+	background-color: green;
+	color: white;
+	padding: 8px 15px;
+	border-radius: 5px;
+	border: 1px dashed gray;
+}
+
+#miFormulario {
+	background-color: lightblue;
+}

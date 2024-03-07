@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4. Formulario Bootstrap</title>
+  <script src="estilos/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="estilos/principal.css">
+  <link rel="stylesheet" href="estilos/bootstrap.min.css">
+</head>
+<body>
+  <div class="container-fluid row">
+    <form id="miFormulario" class="p-2">
+      <!--Primera columna-->
+      <div class="col col-6 m-2">
+
+        <label class="mb-3"><b>Cuéntanos sobre ti</b></label>
+        <div class="mb-3">
+          <label for="nombre" class="form-label"><b>Nombre</b></label>
+          <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label"><b>Apellidos</b></label>
+          <input type="email" class="form-control" id="apellidos" placeholder="Escribe tus apellidos" required>
+        </div>
+        <div class="mb-3">
+          <label for="duda" class="form-label"><b>Seleccione fecha</b></label>
+          <input type="date" class="form-control" id="fecha" required>
+        </div>
+        <label for="selector" class="form-label">Elige una de nuestras clinicas</label>
+            <select class="form-select" id="selector">
+              <option value="1">Paseo Calanda,33</option>
+              <option value="2">Otro</option>
+              <option value="3">Otro más</option>
+            </select>
+        <a href="#">Si lo prefieres envíame un email</a><br>
+        <!--<input type="button" class="btn-enviar btn-success" value="Enviar">-->
+        <button type="button" class="btn btn-success">Enviar</button>
+      </div>
+
+      <!--Segunda columna-->
+      <div class="col col-12 m-2 row">
+        <label class="mb-3"><b>Cuéntanos sobre tu mascota</b></label>
+        <label for="foto">Foto de mi mascota:</label><input type="file" id="foto" name="foto">
+        <!--Primera subcolumna-->
+        <div class="todojunto my-3">
+          <label for="nombremascota">Nombre</label><input type="text" name="nombremascota" placeholder="Escribe el nombre de tu mascota">
+          <label for="edadmascota">Edad</label><input type="text" name="edadmascota" placeholder="Escribe la edad de tu mascota">
+        </div>
+        <!--Segunda subcolumna-->
+        <div class="col col-6 m-2">
+          <label class="mb-3"><b>Tipo de pago</b></label><br>
+          <input type="radio" name="efectivo" value="efectivo" checked="checked">Efectivo<br>
+          <input type="radio" name="tarjeta" value="tarjeta" >Tarjeta<br>
+
+          <label class="mb-3"><b>Cuentanos tus gustos</b></label><br>
+          <input type="checkbox" name="playa" value="playa" checked="checked">Playa<br>
+          <input type="checkbox" name="montana" value="montana" checked="checked">Montaña<br>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
