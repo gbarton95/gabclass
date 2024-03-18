@@ -438,3 +438,46 @@ Botón que lleva a un sitio:
 <form action="{{route( cosa.index )}}"><boton de SUBMIT>
 
 El enrutador lee de arriba a abajo: si hay un conflicto, cogerá lo primero que funcione.
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~28/02/24
+
+PROYECTO:
+
+Abstract bajo el español en inglés y cursiva.
+
+Palabras no españolas en cursivas.
+
+Powerpoint en inglés
+
+Framework: Angular, Bootstrap, Laravel?
+API: Google Maps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
