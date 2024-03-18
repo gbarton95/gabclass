@@ -1,0 +1,27 @@
+Tema4:Eventos
+4.0.1 funcion onclick
+4.0.2 funcion onkeydown
+4.0.3 funcion onfocus
+4.0.4 funcion enviar formulario
+4.0.5 funcion validar formulario con checkbox
+4.1.1 manejador de evento (coordenadas ratón/pantalla)
+4.1.2 document.onclick (colores+alert)
+4.1.3 manejador de evento onKeyPress
+4.1.4 caja de 100 caracteres y restantes
+4.2.1 expresiones regulares (DNI, correo...)
+4.2.2 formulario con validaciones
+4.3.1 cookies: numero de accesos
+4.3.2 sessionStorage y localStorage
+4.3.3 BIS con alert
+
+Tema5:DOM
+5.1.1 boton pulsado +5 veces
+5.1.2 dos scripts que modifican la página (onload="function")
+5.1.3 enlace que te enseña su propio atributo (onclick="function(this)")
+5.1.4 BIS con *manejador semántico*
+5.1.5 cambiar el href de un enlace al clicar sobre él
+5.1.6 cambiar el title del enlace al clicar sobre él
+5.1.7 cambiar el title al hacer mouseover
+5.1.8 aparecer/desaparecer elemento con onmouseover/onclick/onmouseout
+5.1.9 insertar elemento antes/después de otro
+5.1.10 colores
